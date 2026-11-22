@@ -348,8 +348,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           <div className="max-w-2xl space-y-6 text-left">
             
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#9bf00b] text-xs font-mono font-bold tracking-wider uppercase shadow-lg">
-              <Sparkles className="w-3.5 h-3.5 text-[#9bf00b]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 text-xs font-mono font-bold tracking-wider uppercase shadow-lg">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
               <span>OFFICIAL STUDENT CONSOLE HARDWARE</span>
             </div>
 
@@ -363,17 +363,17 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               Transform any everyday college laptop or budget PC into a dedicated 60 FPS gaming powerhouse. Powered by DirectStorage NVMe speed, plug in your XPlay drive, boot instantly into AAA games, and experience zero host drive wear with permanent game ownership.
             </p>
 
-            {/* Call To Action Button (Exact Xbox Green with Hover Animation) */}
+            {/* Call To Action Button (Ice Blue Signature Color) */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={triggerConfettiAndPreOrder}
-                className="group bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all duration-200 cursor-pointer shadow-lg shadow-[#107c10]/40 inline-flex items-center gap-2 hover:shadow-xl hover:shadow-[#107c10]/60"
+                className="group bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-sans font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-200 cursor-pointer shadow-lg shadow-sky-500/30 inline-flex items-center gap-2 hover:shadow-xl hover:shadow-cyan-400/50"
               >
                 <span>PRE-ORDER NOW — ₹6,999</span>
                 <ChevronRight className="w-4 h-4 stroke-[3] group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <span className="text-xs text-[#9bf00b] font-mono font-bold px-3 py-1 rounded bg-black/40 border border-[#9bf00b]/30 backdrop-blur-sm">
+              <span className="text-xs text-cyan-300 font-mono font-bold px-3.5 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-400/30 backdrop-blur-sm">
                 Student Edition: 250GB SSD Included (₹6,999)
               </span>
             </div>
@@ -381,38 +381,16 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             {/* Legal / Hardware Specs Copy */}
             <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
               Compatible with any Windows 10/11 laptop or desktop with USB 3.0 or Type-C.{' '}
-              <a href="#specs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+              <a href="#specs" className="text-white underline hover:text-cyan-300 transition-colors">
                 See hardware specs.
               </a>
               <br className="hidden sm:inline" />
               {' '}Questions about setup or campus delivery?{' '}
-              <a href="#faqs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+              <a href="#faqs" className="text-white underline hover:text-cyan-300 transition-colors">
                 Read student FAQs.
               </a>
             </p>
 
-          </div>
-        </div>
-
-        {/* Floating Feature Bridge Ticker at bottom of hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-[#f8fafc] via-[#f8fafc]/90 to-transparent pt-12 pb-4 px-6">
-          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-slate-700 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-slate-200/90 shadow-xl shadow-slate-900/5">
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span className="font-bold text-slate-900">1,050 MB/s DirectStorage</span>
-            </div>
-            <div className="hidden sm:flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-sky-600 shrink-0" />
-              <span>SAN Policy 4 (Zero Host Wear)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-amber-500 shrink-0" />
-              <span className="font-bold text-slate-900">1x AAA Digital Game Voucher</span>
-            </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Laptop className="w-4 h-4 text-purple-600 shrink-0" />
-              <span>48g Satin Silver CNC Body</span>
-            </div>
           </div>
         </div>
       </section>
@@ -425,10 +403,30 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80 relative select-none overflow-hidden"
       >
         {/* Soft Ambient Glows */}
-        <div className="absolute top-0 right-10 w-96 h-96 bg-emerald-100/50 rounded-full blur-[110px] pointer-events-none" />
+        <div className="absolute top-0 right-10 w-96 h-96 bg-cyan-100/50 rounded-full blur-[110px] pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-sky-100/50 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto space-y-12 relative z-10">
+
+          {/* Quick Hardware Ticker inside Section 2 */}
+          <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-slate-700 bg-slate-50 rounded-2xl p-4 border border-slate-200/80 shadow-xs">
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-sky-600 shrink-0" />
+              <span className="font-bold text-slate-900">1,050 MB/s DirectStorage</span>
+            </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>SAN Policy 4 (Zero Host Wear)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="w-4 h-4 text-amber-500 shrink-0" />
+              <span className="font-bold text-slate-900">1x AAA Digital Game Voucher</span>
+            </div>
+            <div className="hidden md:flex items-center gap-2">
+              <Laptop className="w-4 h-4 text-purple-600 shrink-0" />
+              <span>48g Satin Silver CNC Body</span>
+            </div>
+          </div>
           
           <div className="max-w-2xl text-left space-y-3 reveal-header">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-bold uppercase tracking-wider">
@@ -501,7 +499,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
                   <button
                     onClick={triggerConfettiAndPreOrder}
-                    className="bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-full transition-all cursor-pointer shadow-lg shadow-emerald-600/30 inline-flex items-center gap-2"
+                    className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-full transition-all cursor-pointer shadow-lg shadow-sky-500/30 inline-flex items-center gap-2"
                   >
                     <span>CLAIM WITH ₹6,999 PRE-ORDER</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -661,7 +659,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             <div>
               <button
                 onClick={triggerConfettiAndPreOrder}
-                className="bg-slate-900 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-sky-500/20 inline-flex items-center gap-2"
               >
                 <span>Pre-Order Student Edition</span>
                 <ChevronRight className="w-4 h-4" />
@@ -880,7 +878,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             <div>
               <button
                 onClick={triggerConfettiAndPreOrder}
-                className="bg-slate-900 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-sky-500/20 inline-flex items-center gap-2"
               >
                 <span>Pre-Order Now — ₹6,999</span>
                 <ChevronRight className="w-4 h-4" />
@@ -1036,7 +1034,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             </div>
             <button
               onClick={triggerConfettiAndPreOrder}
-              className="bg-slate-900 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-md shrink-0 inline-flex items-center gap-2"
+              className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-md shrink-0 inline-flex items-center gap-2"
             >
               <span>PRE-ORDER NOW</span>
               <ChevronRight className="w-4 h-4" />
