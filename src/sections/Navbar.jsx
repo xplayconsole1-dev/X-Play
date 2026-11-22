@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Sparkles, LogIn, ArrowRight } from 'lucide-react';
 
 const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
-  const location = useLocation();
-  const isLight = location.pathname.startsWith('/consoles/student');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -55,11 +53,7 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full flex justify-between items-center md:px-16 md:py-6 p-4 z-[100] transition-all select-none ${
-      isLight 
-        ? 'bg-white/85 backdrop-blur-xl border-b border-slate-200/80 shadow-xs' 
-        : ''
-    }`}>
+    <nav className="fixed top-0 left-0 w-full flex justify-between items-center md:px-16 md:py-8 p-5 z-[100] transition-all select-none">
       {/* Clean Delicate X Logo */}
       <Link to="/" onClick={() => setDropdownOpen(false)} className="flex items-center">
         <img
@@ -70,9 +64,7 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
       </Link>
 
       {/* Nav Menu */}
-      <div className={`flex items-center gap-6 sm:gap-8 font-round-bold text-xs sm:text-sm uppercase tracking-widest ${
-        isLight ? 'text-slate-800' : 'text-white'
-      }`}>
+      <div className="flex items-center gap-6 sm:gap-8 font-round-bold text-white text-xs sm:text-sm uppercase tracking-widest">
 
         {/* Consoles dropdown */}
         <div
@@ -83,14 +75,10 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
         >
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className={`flex items-center gap-1.5 transition-colors cursor-pointer py-2 ${
-              isLight ? 'hover:text-sky-600' : 'hover:text-cyan-300'
-            }`}
+            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors cursor-pointer py-2"
           >
             <span>Consoles</span>
-            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
-              dropdownOpen ? 'rotate-180 text-sky-600' : isLight ? 'text-slate-500' : 'text-white/70'
-            }`} />
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-cyan-400' : 'text-white/70'}`} />
           </button>
 
           {dropdownOpen && (
@@ -120,33 +108,33 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
                   >
                     {/* Popular Pill */}
                     {c.popular && (
-                      <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-[9px] font-sans font-bold uppercase tracking-wider bg-sky-500 text-white px-2 py-0.5 rounded-full shadow-sm">
-                        Popular
+                      <span className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.2 rounded-full bg-sky-600 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs">
+                        Best Value
                       </span>
                     )}
 
-                    {/* Image Stage */}
-                    <div className="w-full h-20 rounded-xl bg-white flex items-center justify-center p-2 mb-2 shadow-sm border border-slate-100 group-hover:scale-105 transition-transform duration-200">
-                      <img
-                        src={c.image}
+                    {/* Small Hardware Stage */}
+                    <div className="w-full h-20 rounded-xl bg-white border border-slate-100 mb-2 p-1 flex items-center justify-center overflow-hidden">
+                      <img 
+                        src={c.image} 
                         alt={c.name}
-                        className="h-full w-auto object-contain"
+                        className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
 
-                    {/* Title & Spec */}
+                    {/* Edition Specs */}
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
-                        {c.name}
-                      </div>
-                      <div className="text-[11px] text-slate-500 font-sans mt-0.5">
+                      <h4 className="text-xs font-black text-slate-900 group-hover:text-sky-600 transition-colors">
+                        XPlay {c.name}
+                      </h4>
+                      <p className="text-[10px] text-slate-500 font-medium truncate mt-0.5">
                         {c.spec}
-                      </div>
+                      </p>
                     </div>
 
                     {/* Price */}
-                    <div className="mt-2.5 pt-2 border-t border-slate-200/60">
-                      <span className="text-xs font-mono font-bold text-slate-900 group-hover:text-sky-600">
+                    <div className="mt-2 pt-1.5 border-t border-slate-100/80">
+                      <span className="text-xs font-black text-slate-900 font-sans">
                         {c.price}
                       </span>
                     </div>
@@ -169,39 +157,31 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
           )}
         </div>
 
-        <a href="#about" className={`transition-colors hidden md:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
+        <Link to="/#about" className="hover:text-yellow transition-colors hidden md:inline-block">
           Hardware
-        </a>
+        </Link>
 
-        <a href="#consoles" className={`transition-colors hidden md:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
+        <Link to="/#consoles" className="hover:text-yellow transition-colors hidden md:inline-block">
           Editions
-        </a>
+        </Link>
 
-        <a href="#games" className={`transition-colors hidden sm:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
+        <Link to="/#games" className="hover:text-yellow transition-colors hidden sm:inline-block">
           Games
-        </a>
+        </Link>
 
         <button
           onClick={() => onOpenPreOrder?.('pro')}
-          className={`hidden sm:inline-flex items-center px-4 py-2 rounded-full font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer ${
-            isLight 
-              ? 'bg-slate-900 hover:bg-sky-600 text-white shadow-slate-900/10' 
-              : 'bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 shadow-sky-500/20'
-          }`}
+          className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-sky-500/20 cursor-pointer"
         >
           Pre-Order
         </button>
 
         <button
           onClick={() => onOpenLogin?.()}
-          className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-sm cursor-pointer ml-1 ${
-            isLight 
-              ? 'border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:text-sky-600' 
-              : 'border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300'
-          }`}
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300 font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-md cursor-pointer ml-1"
           aria-label="Login"
         >
-          <LogIn className={`w-3.5 h-3.5 ${isLight ? 'text-sky-600' : 'text-cyan-400'}`} />
+          <LogIn className="w-3.5 h-3.5 text-cyan-400" />
           <span>Login</span>
         </button>
       </div>

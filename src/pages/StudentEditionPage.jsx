@@ -91,7 +91,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans antialiased selection:bg-sky-500 selection:text-white pt-20">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans antialiased selection:bg-sky-500 selection:text-white">
       <SEO
         title="XPlay Student Edition | 250GB DirectStorage Gaming Drive"
         description="Transform any college laptop or budget PC into a 60 FPS gaming powerhouse. Includes 250GB fast SSD and 1x full AAA game key for ₹6,999."
@@ -99,67 +99,33 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       />
 
       {/* ============================================================== */}
-      {/* 1. CLUTTER-FREE SUB-NAVBAR                                     */}
-      {/* ============================================================== */}
-      <div className="w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-20 z-40 select-none shadow-xs">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-3">
-            <span className="font-black text-sm tracking-tight text-slate-900 uppercase">
-              XPlay <span className="text-sky-600">Student</span>
-            </span>
-            <span className="hidden sm:inline-block text-[11px] font-semibold bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full border border-sky-100">
-              250GB SSD • ₹6,999
-            </span>
-          </div>
-
-          <div className="flex items-center gap-5">
-            <nav className="hidden md:flex items-center gap-6 text-slate-500 font-medium text-xs">
-              <a href="#overview" className="hover:text-sky-600 transition-colors">Overview</a>
-              <a href="#game-included" className="hover:text-sky-600 transition-colors">Game Included</a>
-              <a href="#gaming-mode" className="hover:text-sky-600 transition-colors">Game Mode</a>
-              <a href="#specs" className="hover:text-sky-600 transition-colors">Specs</a>
-              <a href="#hud" className="hover:text-sky-600 transition-colors">HUD</a>
-              <a href="#faqs" className="hover:text-sky-600 transition-colors">FAQ</a>
-            </nav>
-
-            <button
-              onClick={() => onOpenPreOrder?.('student')}
-              className="bg-slate-900 hover:bg-sky-600 text-white font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-full transition-all cursor-pointer shadow-xs active:scale-95"
-            >
-              Pre-Order ₹6,999
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* ============================================================== */}
-      {/* 2. HERO SECTION: CLEAN, BRIGHT & SPACIOUS (#overview)          */}
+      {/* 1. HERO SECTION: SLEEK HERO WITH EXACT WEBSITE FLOATING NAVBAR */}
       {/* ============================================================== */}
       <section 
         id="overview" 
-        className="relative w-full py-16 sm:py-24 px-6 sm:px-12 bg-gradient-to-b from-white via-slate-50 to-[#f1f6fc] border-b border-slate-200/80 overflow-hidden"
+        className="relative w-full pt-32 sm:pt-40 pb-20 sm:pb-28 px-6 sm:px-12 bg-gradient-to-b from-[#050914] via-[#091122] to-[#f8fafc] border-b border-slate-200/80 overflow-hidden"
       >
-        {/* Soft Background Radial Light */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(14,165,233,0.12),transparent)] pointer-events-none" />
+        {/* Ambient Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-sky-500/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
           
-          {/* Left Column: Clear, High-Impact Messaging */}
+          {/* Left Column: High-Impact Typography & Value Proposition */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200/80 text-sky-700 text-xs font-bold tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-400 text-xs font-bold tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>COLLEGE STUDENTS & ESPORTS LINEUP</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.08] font-round-bold uppercase">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08] font-round-bold uppercase">
               XPlay on PC <br />
-              <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 bg-clip-text text-transparent">
                 Student Edition
               </span>
             </h1>
 
-            <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg font-normal leading-relaxed">
               Transform any everyday college laptop or budget desktop into an uncompromised 60 FPS gaming sanctuary. Plug in your 250GB DirectStorage NVMe drive, boot instantly, and enjoy AAA gaming with zero host drive wear.
             </p>
 
@@ -167,39 +133,39 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-slate-900 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-md inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-sky-500/25 inline-flex items-center justify-center gap-2"
               >
                 <span>Get Student Edition — ₹6,999</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-3.5 py-2 rounded-full w-fit">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="flex items-center gap-2 text-xs font-semibold text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-3.5 py-2 rounded-full w-fit">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Save ₹1,000 Launch Offer</span>
               </div>
             </div>
 
             {/* Quick Spec Highlights */}
-            <div className="pt-4 grid grid-cols-3 gap-3 border-t border-slate-200/80 text-left">
+            <div className="pt-4 grid grid-cols-3 gap-3 border-t border-white/10 text-left">
               <div>
                 <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Storage</span>
-                <span className="text-slate-900 font-extrabold text-sm sm:text-base">250GB SSD</span>
+                <span className="text-white font-extrabold text-sm sm:text-base">250GB SSD</span>
               </div>
               <div>
                 <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Read Speed</span>
-                <span className="text-slate-900 font-extrabold text-sm sm:text-base">1,050 MB/s</span>
+                <span className="text-white font-extrabold text-sm sm:text-base">1,050 MB/s</span>
               </div>
               <div>
                 <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Isolation</span>
-                <span className="text-slate-900 font-extrabold text-sm sm:text-base">SAN Policy 4</span>
+                <span className="text-white font-extrabold text-sm sm:text-base">SAN Policy 4</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Clean Hardware Studio Stage */}
+          {/* Right Column: Clean White Hardware Studio Card */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.06)] group">
+            <div className="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.25)] group">
               
               {/* Product Visual Stage */}
               <div className="relative w-full aspect-[4/3] rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100/70 border border-slate-100 flex items-center justify-center p-6 overflow-hidden">
@@ -209,7 +175,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 
-                <span className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md border border-slate-200 px-3 py-1 rounded-full text-[11px] font-bold text-slate-700 shadow-xs">
+                <span className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md border border-slate-200 px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 shadow-xs">
                   Satin Silver CNC Aluminum
                 </span>
                 
@@ -231,7 +197,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 3. SECTION 2: 1x AAA DIGITAL GAME INCLUDED (#game-included)   */}
+      {/* 2. SECTION 2: 1x AAA DIGITAL GAME INCLUDED                     */}
       {/* ============================================================== */}
       <section 
         id="game-included" 
@@ -287,7 +253,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 4. SECTION 3: STUDY MODE OFF, GAMING MODE ON (#gaming-mode)     */}
+      {/* 3. SECTION 3: STUDY MODE OFF, GAMING MODE ON                   */}
       {/* ============================================================== */}
       <section 
         id="gaming-mode" 
@@ -337,7 +303,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 5. SECTION 4: ENGINEERED FOR STUDENT LAPTOPS (#specs)          */}
+      {/* 4. SECTION 4: ENGINEERED FOR STUDENT LAPTOPS (#specs)          */}
       {/* ============================================================== */}
       <section 
         id="specs" 
@@ -411,7 +377,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. SECTION 5: XPLAY HUD TABS (#hud)                            */}
+      {/* 5. SECTION 5: XPLAY HUD TABS                                   */}
       {/* ============================================================== */}
       <section 
         id="hud" 
@@ -483,7 +449,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 7. SECTION 6: UNIVERSAL COMPATIBILITY                          */}
+      {/* 6. SECTION 6: UNIVERSAL COMPATIBILITY                          */}
       {/* ============================================================== */}
       <section className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -530,7 +496,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 8. SECTION 7: CAMPUS & HOSTEL MOBILITY                         */}
+      {/* 7. SECTION 7: CAMPUS & HOSTEL MOBILITY                         */}
       {/* ============================================================== */}
       <section className="py-20 sm:py-28 px-6 sm:px-12 bg-[#f8fafc] border-b border-slate-200/80">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -583,7 +549,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 9. SECTION 8: FREQUENTLY ASKED QUESTIONS (#faqs)               */}
+      {/* 8. SECTION 8: FREQUENTLY ASKED QUESTIONS                       */}
       {/* ============================================================== */}
       <section id="faqs" className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80">
         <div className="max-w-4xl mx-auto space-y-12">
@@ -652,7 +618,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 10. OFFICIAL XPLAY GAMING FOOTER                               */}
+      {/* 9. OFFICIAL XPLAY GAMING FOOTER                                */}
       {/* ============================================================== */}
       <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
