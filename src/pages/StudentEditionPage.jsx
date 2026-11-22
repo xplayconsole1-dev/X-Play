@@ -346,12 +346,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         {/* Content Container (f-x-left f-y-center) */}
         <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-24 pb-20">
           <div className="max-w-2xl space-y-6 text-left">
-            
-            {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 text-xs font-mono font-bold tracking-wider uppercase shadow-lg">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
-              <span>OFFICIAL STUDENT CONSOLE HARDWARE</span>
-            </div>
 
             {/* H1 Heading */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none font-round-bold drop-shadow-md">
