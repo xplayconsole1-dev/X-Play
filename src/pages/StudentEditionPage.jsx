@@ -103,7 +103,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       <section 
         id="backtotop" 
-        className="relative w-full min-h-[92vh] flex items-center overflow-hidden bg-black border-b border-[#222]"
+        className="relative w-full h-screen min-h-screen flex items-center overflow-hidden bg-black select-none"
       >
         {/* Full-bleed Ambient Video Background (Exact Official Xbox on PC Video) */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -122,7 +122,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         </div>
 
         {/* Content Container (f-x-left f-y-center) */}
-        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-32 pb-20">
+        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-20">
           <div className="max-w-2xl space-y-6 text-left">
             
             {/* H1 Heading */}
