@@ -99,100 +99,71 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       />
 
       {/* ============================================================== */}
-      {/* 1. HERO SECTION: SLEEK HERO WITH EXACT WEBSITE FLOATING NAVBAR */}
+      {/* 1. SECTION 1: EXACT 1:1 XBOX ON PC HERO ITEM (#backtotop)      */}
       {/* ============================================================== */}
       <section 
-        id="overview" 
-        className="relative w-full pt-32 sm:pt-40 pb-20 sm:pb-28 px-6 sm:px-12 bg-gradient-to-b from-[#050914] via-[#091122] to-[#f8fafc] border-b border-slate-200/80 overflow-hidden"
+        id="backtotop" 
+        className="relative w-full min-h-[92vh] flex items-center overflow-hidden bg-black border-b border-[#222]"
       >
-        {/* Ambient Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-sky-500/15 rounded-full blur-[140px] pointer-events-none" />
+        {/* Full-bleed Ambient Video Background (Exact Official Xbox on PC Video) */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://cms-assets.xboxservices.com/assets/58/61/58613255-f4d2-4bf9-9217-62a3893ed2d8.jpg?n=2438801_Super-Hero-1084_Poster_1920x1080_03.jpg"
+            className="w-full h-full object-cover object-center"
+            src="https://cms-assets.xboxservices.com/assets/d8/2f/d82f2cf2-4d36-426e-ac14-9a89340d1fb3.mp4?n=2438801_Super-Hero-1084_1920x1080_02.mp4"
+          />
+          {/* Subtle dark gradient overlay to ensure text readability exactly as on xbox.com */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent lg:w-3/4" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+        </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
-          
-          {/* Left Column: High-Impact Typography & Value Proposition */}
-          <div className="lg:col-span-6 space-y-6 text-left">
+        {/* Content Container (f-x-left f-y-center) */}
+        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-32 pb-20">
+          <div className="max-w-2xl space-y-6 text-left">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-400 text-xs font-bold tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-              <span>COLLEGE STUDENTS & ESPORTS LINEUP</span>
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08] font-round-bold uppercase">
-              XPlay on PC <br />
-              <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 bg-clip-text text-transparent">
-                Student Edition
-              </span>
+            {/* H1 Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none font-round-bold">
+              XBOX ON PC
             </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg font-normal leading-relaxed">
-              Transform any everyday college laptop or budget desktop into an uncompromised 60 FPS gaming sanctuary. Plug in your 250GB DirectStorage NVMe drive, boot instantly, and enjoy AAA gaming with zero host drive wear.
+            {/* Subheading / Description */}
+            <p className="text-[#e5e7eb] text-base sm:text-lg font-normal leading-relaxed">
+              Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC. Whether you're playing on a high-end rig, budget-friendly laptop, or anything in between, and whether you prefer a mouse and keyboard or an XBOX controller, we've got you covered.
             </p>
 
-            {/* Price & CTA Row */}
-            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+            {/* Call To Action Button (Exact Xbox Green) */}
+            <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-sky-500/25 inline-flex items-center justify-center gap-2"
+                className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#107c10]/40 inline-flex items-center gap-2"
               >
-                <span>Get Student Edition — ₹6,999</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>GET THE APP</span>
+                <ChevronRight className="w-4 h-4 stroke-[3]" />
               </button>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-3.5 py-2 rounded-full w-fit">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Save ₹1,000 Launch Offer</span>
-              </div>
+              <span className="text-xs text-[#9bf00b] font-mono font-bold">
+                Student Edition: 250GB SSD Included (₹6,999)
+              </span>
             </div>
 
-            {/* Quick Spec Highlights */}
-            <div className="pt-4 grid grid-cols-3 gap-3 border-t border-white/10 text-left">
-              <div>
-                <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Storage</span>
-                <span className="text-white font-extrabold text-sm sm:text-base">250GB SSD</span>
-              </div>
-              <div>
-                <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Read Speed</span>
-                <span className="text-white font-extrabold text-sm sm:text-base">1,050 MB/s</span>
-              </div>
-              <div>
-                <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Isolation</span>
-                <span className="text-white font-extrabold text-sm sm:text-base">SAN Policy 4</span>
-              </div>
-            </div>
+            {/* Legal Copy */}
+            <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
+              Requires Windows 10/11, version 22H2 or higher.{' '}
+              <a href="#specs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+                See system requirements.
+              </a>
+              <br className="hidden sm:inline" />
+              {' '}Having trouble installing the update or app?{' '}
+              <a href="#faqs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+                Get help here.
+              </a>
+            </p>
 
           </div>
-
-          {/* Right Column: Clean White Hardware Studio Card */}
-          <div className="lg:col-span-6">
-            <div className="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.25)] group">
-              
-              {/* Product Visual Stage */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100/70 border border-slate-100 flex items-center justify-center p-6 overflow-hidden">
-                <img 
-                  src="/editions/xplay_student_edition.jpg" 
-                  alt="XPlay Student Edition 250GB Gaming Drive" 
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-                
-                <span className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md border border-slate-200 px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 shadow-xs">
-                  Satin Silver CNC Aluminum
-                </span>
-                
-                <span className="absolute top-3 right-3 bg-sky-50 border border-sky-100 px-2.5 py-0.5 rounded-full text-[10px] font-bold text-sky-700">
-                  48 Grams
-                </span>
-              </div>
-
-              {/* Package Summary */}
-              <div className="mt-5 flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-100">
-                <span>Dual Braided Cables (Type-C & Type-A)</span>
-                <span className="font-semibold text-slate-900">1x AAA Game Key Included</span>
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </section>
 
