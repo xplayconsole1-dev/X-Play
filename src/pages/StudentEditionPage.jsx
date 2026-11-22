@@ -117,7 +117,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       id: 'performance',
       name: 'Performance',
       icon: <Sliders className="w-4 h-4" />,
-      image: 'https://cms-assets.xboxservices.com/assets/ff/ad/ffad9f8e-5c10-4823-981e-fe570350e521.jpg?n=2438801_Hero-multi-feature-0_Performance_767x431.jpg',
       title: 'Real-time 60 FPS & Hardware Telemetry',
       desc: 'Track frame rates, GPU clock speed, CPU temperature, and RAM allocation in real time with zero frame pacing penalties.',
       stat1: '60.0 FPS',
@@ -131,7 +130,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       id: 'audio',
       name: 'Audio Mixer',
       icon: <Volume2 className="w-4 h-4" />,
-      image: 'https://cms-assets.xboxservices.com/assets/c8/47/c84729a6-106a-4d3d-b5dd-036858cea164.jpg?n=2438801_Hero-multi-feature-0_Audio_767x431.jpg',
       title: 'Game & Discord Voice Channel Balancer',
       desc: 'Balance in-game sound effects, Discord voice chat, and background music without alt-tabbing or leaving your match.',
       stat1: '100% / 65%',
@@ -145,7 +143,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       id: 'capture',
       name: 'Capture',
       icon: <Camera className="w-4 h-4" />,
-      image: 'https://cms-assets.xboxservices.com/assets/30/f1/30f1e1e9-3d4b-4f2d-a774-2beb60b07c71.jpg?n=2438801_Hero-multi-feature-0_Capture_767x431.jpg',
       title: 'Instant 1080p 60 FPS Replay & Screenshot Capture',
       desc: 'Record your best clutch kills and high-speed maneuvers in crisp 1080p directly saved onto the XPlay drive.',
       stat1: '1080p',
@@ -159,7 +156,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       id: 'optimizations',
       name: 'RAM Boost',
       icon: <LayoutGrid className="w-4 h-4" />,
-      image: 'https://cms-assets.xboxservices.com/assets/3a/10/3a10b744-c6f1-47f4-a124-712647130d5c.jpg?n=2438801_Hero-multi-feature-0_widgets_767x431.jpg',
       title: 'One-Click Background Task Suspension',
       desc: 'Automatically suspend background college tabs and heavy apps to free up to 3.5GB of RAM for dedicated game rendering.',
       stat1: '+3.5 GB',
@@ -174,7 +170,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
   const gamesCatalog = [
     {
       title: 'Forza Horizon 5',
-      publisher: 'Xbox Game Studios',
+      publisher: 'Playground Games',
       genre: 'Open World Racing',
       size: '110 GB',
       perfTarget: '1080p • 60 FPS Ultra',
@@ -295,7 +291,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
     },
     {
       q: 'Can I connect my own controller or mouse and keyboard?',
-      a: 'Yes. The Student Edition is designed as a standalone drive so you can bring whatever input you love: Xbox Wireless Controller, PS5 DualSense, Cosmic Byte, Redgear, or standard mouse and keyboard. Full native input mapping is pre-calibrated.'
+      a: 'Yes. The Student Edition is designed as a standalone drive so you can bring whatever input you love: Wireless Gamepad, PS5 DualSense, Cosmic Byte, Redgear, or standard mouse and keyboard. Full native input mapping is pre-calibrated.'
     },
     {
       q: 'What comes inside the XPlay Student Edition box?',
@@ -401,26 +397,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-sky-100/50 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto space-y-12 relative z-10">
-
-          {/* Quick Hardware Ticker inside Section 2 */}
-          <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-slate-700 bg-slate-50 rounded-2xl p-4 border border-slate-200/80 shadow-xs">
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-sky-600 shrink-0" />
-              <span className="font-bold text-slate-900">1,050 MB/s DirectStorage</span>
-            </div>
-            <div className="hidden sm:flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>SAN Policy 4 (Zero Host Wear)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-amber-500 shrink-0" />
-              <span className="font-bold text-slate-900">1x AAA Digital Game Voucher</span>
-            </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Laptop className="w-4 h-4 text-purple-600 shrink-0" />
-              <span>48g Satin Silver CNC Body</span>
-            </div>
-          </div>
           
           <div className="max-w-2xl text-left space-y-3 reveal-header">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-bold uppercase tracking-wider">
@@ -572,21 +548,21 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             <div className="rounded-3xl overflow-hidden border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] bg-white p-3 space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-950">
                 <img
-                  src="https://cms-assets.xboxservices.com/assets/b0/a4/b0a49731-d54c-45fd-8585-4057f8f28358.png?n=Xbox-On-PC_Xbox-Mode_Hero-0_767x431_01.png"
-                  alt="PC gaming setup with controller and keyboard"
-                  className="w-full h-auto object-cover"
+                  src="/assets/xplay_transform_setup.jpg"
+                  alt="XPlay Console setup with laptop and controller"
+                  className="w-full h-auto object-cover max-h-[440px] rounded-xl"
                 />
 
                 {/* Floating Live Telemetry Badge over image */}
-                <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-3.5 text-white flex items-center justify-between gap-3 text-xs">
+                <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-3.5 text-white flex flex-wrap items-center justify-between gap-3 text-xs shadow-lg">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className={`w-2.5 h-2.5 rounded-full ${activeMode === 'gaming' ? 'bg-cyan-400' : 'bg-emerald-400'} animate-pulse`} />
                     <span className="font-bold font-mono">
-                      {activeMode === 'gaming' ? 'GAMING MODE: 60 FPS LOCKED' : 'STUDY MODE: 0 RPM SILENT'}
+                      {activeMode === 'gaming' ? 'XPLAY DIRECTSTORAGE: 60 FPS LOCKED' : 'STUDY MODE: 0 RPM SILENT (ISOLATED)'}
                     </span>
                   </div>
-                  <div className="font-mono text-slate-400 hidden sm:block">
-                    {activeMode === 'gaming' ? 'NVMe: 1,050 MB/s Active' : 'C: Drive 100% Isolated'}
+                  <div className="font-mono text-cyan-300 text-xs font-bold">
+                    {activeMode === 'gaming' ? '1,050 MB/s Active' : 'C: Drive 100% Safe'}
                   </div>
                 </div>
               </div>
@@ -785,12 +761,159 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
             {/* Active Tab Showcase Stage */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-[0_15px_35px_rgba(15,23,42,0.06)]">
-              <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-100 bg-slate-950 shadow-md relative group">
-                <img
-                  src={gameBarTabs[activeGameBarTab].image}
-                  alt={gameBarTabs[activeGameBarTab].name}
-                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              {/* Native XPlay Telemetry HUD Screen (100% XPlay Branded) */}
+              <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl relative min-h-[380px] flex flex-col justify-between p-5 text-white">
+                {/* Background Game Scene Overlay */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-25 filter blur-[1px] scale-105 pointer-events-none"
+                  style={{ backgroundImage: `url('/assets/games/cyberpunk_cover.jpg')` }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent pointer-events-none" />
+
+                {/* HUD Top Bar */}
+                <div className="relative z-10 flex items-center justify-between pb-3 border-b border-white/10">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-300">
+                      XPLAY TELEMETRY OVERLAY
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px] font-mono text-slate-400">
+                    <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">
+                      60.0 FPS LOCKED
+                    </span>
+                    <span>14ms</span>
+                  </div>
+                </div>
+
+                {/* Dynamic Content based on Active Tab */}
+                <div className="relative z-10 py-4 my-auto">
+                  {activeGameBarTab === 0 && (
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-left">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">FRAMERATE</span>
+                          <span className="text-xl font-black font-mono text-emerald-400">60.0 FPS</span>
+                          <span className="text-[10px] text-emerald-500/80 block mt-0.5">DirectStorage 1:1</span>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-left">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">NVMe READ</span>
+                          <span className="text-xl font-black font-mono text-sky-400">1,050 MB/s</span>
+                          <span className="text-[10px] text-sky-400/80 block mt-0.5">Sustained PCIe</span>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-left">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">GPU TEMP</span>
+                          <span className="text-xl font-black font-mono text-cyan-300">42°C</span>
+                          <span className="text-[10px] text-cyan-400/80 block mt-0.5">Passive Cool</span>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-left">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">HOST WEAR</span>
+                          <span className="text-xl font-black font-mono text-purple-400">0.00%</span>
+                          <span className="text-[10px] text-purple-400/80 block mt-0.5">Zero C: Drive Writes</span>
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-between text-xs">
+                        <span className="text-slate-400 font-mono">Frame Pacing Curve:</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-28 sm:w-36 h-2 rounded-full bg-emerald-500/30 overflow-hidden">
+                            <div className="w-full h-full bg-emerald-400 rounded-full" />
+                          </div>
+                          <span className="text-emerald-400 font-mono font-bold text-xs">16.6ms Flat</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeGameBarTab === 1 && (
+                    <div className="space-y-3">
+                      <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1.5 text-left">
+                        <div className="flex justify-between text-xs font-mono">
+                          <span className="text-slate-300 font-bold">Game Audio (DirectStorage)</span>
+                          <span className="text-cyan-400 font-bold">100%</span>
+                        </div>
+                        <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                          <div className="w-full h-full bg-cyan-400 rounded-full" />
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1.5 text-left">
+                        <div className="flex justify-between text-xs font-mono">
+                          <span className="text-slate-300 font-bold">Discord Voice Channel</span>
+                          <span className="text-sky-400 font-bold">65%</span>
+                        </div>
+                        <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                          <div className="w-[65%] h-full bg-sky-400 rounded-full" />
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1.5 text-left">
+                        <div className="flex justify-between text-xs font-mono">
+                          <span className="text-slate-300 font-bold">Spatial Sound Passthrough</span>
+                          <span className="text-emerald-400 font-bold">Low Latency (0ms)</span>
+                        </div>
+                        <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                          <div className="w-full h-full bg-emerald-400 rounded-full" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeGameBarTab === 2 && (
+                    <div className="space-y-3">
+                      <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-between text-left">
+                        <div>
+                          <span className="text-xs font-mono font-bold text-white block">Instant Replay Buffer</span>
+                          <span className="text-[11px] text-slate-400">Captures last 30s clutch play in 1080p 60 FPS</span>
+                        </div>
+                        <span className="px-2.5 py-1 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30 text-[10px] font-bold font-mono">
+                          ACTIVE ●
+                        </span>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-between text-left">
+                        <div>
+                          <span className="text-xs font-mono font-bold text-white block">Storage Destination</span>
+                          <span className="text-[11px] text-slate-400 font-mono">XPlay NVMe Drive (E:\Captures)</span>
+                        </div>
+                        <span className="text-xs text-sky-400 font-mono font-bold">
+                          Zero C: Wear
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeGameBarTab === 3 && (
+                    <div className="space-y-3">
+                      <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 text-left space-y-1.5">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs font-mono font-bold text-white">RAM Optimization Status</span>
+                          <span className="text-xs font-mono font-bold text-emerald-400">+3.5 GB Freed</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400">
+                          Suspended background browser tabs and background tasks. 100% RAM & GPU allocated to game.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 text-left">
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">GPU Priority</span>
+                          <span className="text-sm font-black font-mono text-cyan-300">Level 1 (Exclusive)</span>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-700/80">
+                          <span className="text-[10px] text-slate-400 uppercase font-mono block">Background I/O</span>
+                          <span className="text-sm font-black font-mono text-emerald-400">0 KB/s (Suspended)</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* HUD Bottom Status */}
+                <div className="relative z-10 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                  <span>DirectStorage v1.2</span>
+                  <span className="text-cyan-400 font-bold">XPlay Console OS Engine</span>
+                </div>
               </div>
 
               <div className="lg:col-span-5 space-y-5 text-left">
@@ -836,7 +959,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
                 <div className="pt-2">
                   <span className="text-xs font-mono text-slate-400 block">
-                    Keyboard Shortcut: Press <kbd className="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-slate-700 font-mono font-bold">Win + G</kbd> anytime
+                    Keyboard Shortcut: Press <kbd className="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-slate-700 font-mono font-bold">Shift + F2</kbd> or Gamepad Guide button anytime
                   </span>
                 </div>
               </div>
@@ -881,11 +1004,11 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="rounded-3xl overflow-hidden border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] bg-white p-2">
+            <div className="rounded-3xl overflow-hidden border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] bg-white p-3">
               <img
-                src="https://cms-assets.xboxservices.com/assets/f4/bf/f4bf70a0-043f-4e08-9df5-6e5a6ef67e3a.jpg?n=2438801_Feature-Merch-0_Handheld_1040x585.jpg"
-                alt="XPlay Console handheld and laptop gaming setup"
-                className="w-full h-auto rounded-2xl object-cover"
+                src="/assets/play_your_way_devices_clean.png"
+                alt="XPlay Console handheld, laptop and PC ecosystem"
+                className="w-full h-auto rounded-2xl object-contain bg-gradient-to-b from-slate-50 to-white"
               />
             </div>
           </div>

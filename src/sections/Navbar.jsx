@@ -4,7 +4,17 @@ import { ChevronDown, Sparkles, LogIn, ArrowRight } from 'lucide-react';
 
 const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const consoleEditions = [
     {
@@ -53,7 +63,11 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center md:px-16 md:py-8 p-5 z-[100] transition-all select-none">
+    <nav className={`fixed top-0 left-0 w-full flex justify-between items-center transition-all duration-300 z-[100] select-none ${
+      scrolled 
+        ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/10 md:px-16 md:py-4 p-4 shadow-xl' 
+        : 'md:px-16 md:py-8 p-5 bg-transparent'
+    }`}>
       {/* Clean Delicate X Logo */}
       <Link to="/" onClick={() => setDropdownOpen(false)} className="flex items-center">
         <img
