@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ChevronRight, 
-  Sliders, 
-  Volume2, 
-  Camera, 
-  LayoutGrid, 
-  ShieldCheck, 
-  HardDrive, 
-  Zap, 
-  Cpu, 
-  Sparkles, 
-  Plus, 
+import {
+  ChevronRight,
+  Sliders,
+  Volume2,
+  Camera,
+  LayoutGrid,
+  ShieldCheck,
+  HardDrive,
+  Zap,
+  Cpu,
+  Sparkles,
+  Plus,
   Minus,
   CheckCircle2,
   Gamepad2,
@@ -101,8 +101,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 1. SECTION 1: EXACT 1:1 XBOX ON PC HERO ITEM (#backtotop)      */}
       {/* ============================================================== */}
-      <section 
-        id="backtotop" 
+      <section
+        id="backtotop"
         className="relative w-full h-screen min-h-screen flex items-center overflow-hidden bg-black select-none"
       >
         {/* Full-bleed Ambient Video Background (Exact Official Xbox on PC Video) */}
@@ -124,15 +124,15 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         {/* Content Container (f-x-left f-y-center) */}
         <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-20">
           <div className="max-w-2xl space-y-6 text-left">
-            
+
             {/* H1 Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none font-round-bold">
-              XBOX ON PC
+              XPLAY ON PC
             </h1>
 
             {/* Subheading / Description */}
             <p className="text-[#e5e7eb] text-base sm:text-lg font-normal leading-relaxed">
-              Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC. Whether you're playing on a high-end rig, budget-friendly laptop, or anything in between, and whether you prefer a mouse and keyboard or an XBOX controller, we've got you covered.
+              Transform any everyday college laptop or budget PC into a dedicated 60 FPS gaming powerhouse. Powered by DirectStorage NVMe speed, plug in your XPlay drive, boot instantly into AAA games, and experience zero host drive wear with permanent game ownership.
             </p>
 
             {/* Call To Action Button (Exact Xbox Green) */}
@@ -141,7 +141,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 onClick={() => onOpenPreOrder?.('student')}
                 className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#107c10]/40 inline-flex items-center gap-2"
               >
-                <span>GET THE APP</span>
+                <span>PRE-ORDER NOW — ₹6,999</span>
                 <ChevronRight className="w-4 h-4 stroke-[3]" />
               </button>
 
@@ -150,16 +150,16 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               </span>
             </div>
 
-            {/* Legal Copy */}
+            {/* Legal / Hardware Specs Copy */}
             <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
-              Requires Windows 10/11, version 22H2 or higher.{' '}
+              Compatible with any Windows 10/11 laptop or desktop with USB 3.0 or Type-C.{' '}
               <a href="#specs" className="text-white underline hover:text-[#9bf00b] transition-colors">
-                See system requirements.
+                See hardware specs.
               </a>
               <br className="hidden sm:inline" />
-              {' '}Having trouble installing the update or app?{' '}
+              {' '}Questions about setup or campus delivery?{' '}
               <a href="#faqs" className="text-white underline hover:text-[#9bf00b] transition-colors">
-                Get help here.
+                Read student FAQs.
               </a>
             </p>
 
@@ -170,12 +170,12 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 2. SECTION 2: 1x AAA DIGITAL GAME INCLUDED                     */}
       {/* ============================================================== */}
-      <section 
-        id="game-included" 
+      <section
+        id="game-included"
         className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80"
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          
+
           <div className="max-w-2xl text-left space-y-3">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               Permanent Digital License
@@ -197,8 +197,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               { title: 'Hogwarts Legacy', img: '/assets/games/hogwarts_cover.jpg' },
               { title: "Marvel's Spider-Man", img: '/assets/games/spiderman_cover.jpg' },
             ].map((g, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="rounded-2xl overflow-hidden aspect-[2/3] bg-slate-100 border border-slate-200/90 hover:border-sky-500 transition-all hover:-translate-y-1 duration-300 shadow-sm hover:shadow-md group relative"
               >
                 <img src={g.img} alt={g.title} className="w-full h-full object-cover" />
@@ -211,7 +211,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
             <span>Redeem permanently on your account. Zero GB taken from your laptop's internal study drive.</span>
-            <button 
+            <button
               onClick={() => onOpenPreOrder?.('student')}
               className="text-sky-600 hover:text-sky-700 font-bold inline-flex items-center gap-1 cursor-pointer"
             >
@@ -226,12 +226,12 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 3. SECTION 3: STUDY MODE OFF, GAMING MODE ON                   */}
       {/* ============================================================== */}
-      <section 
-        id="gaming-mode" 
+      <section
+        id="gaming-mode"
         className="py-20 sm:py-28 px-6 sm:px-12 bg-[#f8fafc] border-b border-slate-200/80"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.06)] bg-white p-2">
               <img
@@ -276,12 +276,12 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 4. SECTION 4: ENGINEERED FOR STUDENT LAPTOPS (#specs)          */}
       {/* ============================================================== */}
-      <section 
-        id="specs" 
+      <section
+        id="specs"
         className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80"
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          
+
           <div className="max-w-2xl text-left space-y-3">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               DirectStorage NVMe Pipeline
@@ -327,8 +327,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 desc: 'Smaller than a standard credit card. Slips into your pocket, backpack or laptop sleeve for easy campus mobility.'
               }
             ].map((f, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200/80 hover:border-sky-400 hover:bg-white hover:shadow-md transition-all space-y-2 group"
               >
                 <span className="text-xs font-mono font-black text-sky-600 bg-sky-50 px-2 py-0.5 rounded border border-sky-100">
@@ -350,12 +350,12 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 5. SECTION 5: XPLAY HUD TABS                                   */}
       {/* ============================================================== */}
-      <section 
-        id="hud" 
+      <section
+        id="hud"
         className="py-20 sm:py-28 px-6 sm:px-12 bg-[#f8fafc] border-b border-slate-200/80"
       >
         <div className="max-w-6xl mx-auto space-y-10">
-          
+
           <div className="max-w-2xl text-left space-y-3">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               In-Game System Overlay
@@ -375,11 +375,10 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveGameBarTab(idx)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase transition-all cursor-pointer ${
-                    activeGameBarTab === idx
-                      ? 'bg-slate-900 text-white shadow-sm'
-                      : 'bg-white text-slate-600 border border-slate-200/80 hover:bg-slate-100 hover:text-slate-900'
-                  }`}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase transition-all cursor-pointer ${activeGameBarTab === idx
+                    ? 'bg-slate-900 text-white shadow-sm'
+                    : 'bg-white text-slate-600 border border-slate-200/80 hover:bg-slate-100 hover:text-slate-900'
+                    }`}
                 >
                   {tab.icon}
                   <span>{tab.name}</span>
@@ -424,7 +423,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       <section className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           <div className="lg:col-span-5 space-y-6 text-left">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               Multi-Device Ecosystem
@@ -471,7 +470,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       <section className="py-20 sm:py-28 px-6 sm:px-12 bg-[#f8fafc] border-b border-slate-200/80">
         <div className="max-w-6xl mx-auto space-y-10">
-          
+
           <div className="max-w-2xl text-left space-y-2">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               Gamer Mobility
@@ -499,8 +498,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 desc: 'Free over-the-air firmware optimizations and DirectStorage patches delivered directly via the XPlay Control Center.'
               }
             ].map((card, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="p-8 rounded-3xl bg-white border border-slate-200/80 hover:border-sky-400 hover:shadow-md transition-all space-y-3 group"
               >
                 <div className="w-10 h-10 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 font-mono font-bold text-sm">
@@ -524,7 +523,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       <section id="faqs" className="py-20 sm:py-28 px-6 sm:px-12 bg-white border-b border-slate-200/80">
         <div className="max-w-4xl mx-auto space-y-12">
-          
+
           <div className="text-center space-y-2">
             <span className="text-sky-600 font-bold text-xs uppercase tracking-[0.25em] block">
               Clear Answers
@@ -539,7 +538,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
           <div className="space-y-3 text-left">
             {faqs.map((faq, index) => (
-              <div 
+              <div
                 key={index}
                 className="border border-slate-200/90 rounded-2xl bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-xs transition-all overflow-hidden"
               >
