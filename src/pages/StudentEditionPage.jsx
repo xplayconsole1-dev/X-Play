@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { 
   ChevronRight, 
-  ChevronDown,
-  Sparkles, 
-  Plus, 
-  Minus,
-  CheckCircle2,
   HardDrive,
-  Zap,
-  ShieldCheck,
-  Award
+  Plus
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import GamingFooter from '../sections/GamingFooter';
@@ -122,7 +115,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       />
 
       {/* ============================================================== */}
-      {/* 1. HERO SECTION: EXACT 1:1 XBOX ON PC HERO                     */}
+      {/* 1. HERO SECTION: EXACT 1:1 FULL SCREEN VIDEO HERO              */}
       {/* ============================================================== */}
       <section 
         id="backtotop" 
@@ -193,33 +186,31 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 2. SECTION 2: ELEVATE YOUR PC GAMING EXPERIENCE WITH XPLAY     */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#111111] text-center select-none">
-        <div className="max-w-[1400px] mx-auto space-y-12">
-          
-          {/* Main Section Title */}
+      <section className="w-full bg-[#111111] text-center select-none pt-24 pb-0">
+        <div className="max-w-[1400px] mx-auto px-6 mb-16">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
             Elevate your PC gaming <br />
             experience with XPLAY
           </h2>
+        </div>
 
-          {/* Full-bleed Video Showcase Card */}
-          <div className="relative rounded-3xl overflow-hidden min-h-[520px] sm:min-h-[600px] flex items-end p-8 sm:p-16 border border-white/10 shadow-2xl group">
-            {/* Background Video */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                poster="https://cms-assets.xboxservices.com/assets/da/3e/da3e2b2a-70e6-4026-a5fe-991aa417cab2.jpg?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.jpg"
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                src="https://cms-assets.xboxservices.com/assets/6d/e2/6de24801-8ced-44c8-bda9-4cfb1d8a2d58.mp4?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.mp4"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-            </div>
+        {/* 100% Full Bleed Edge-To-Edge Video Banner */}
+        <div className="relative w-full h-[580px] sm:h-[700px] flex items-end overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://cms-assets.xboxservices.com/assets/da/3e/da3e2b2a-70e6-4026-a5fe-991aa417cab2.jpg?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+            src="https://cms-assets.xboxservices.com/assets/6d/e2/6de24801-8ced-44c8-bda9-4cfb1d8a2d58.mp4?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.mp4"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent hidden sm:block w-3/4" />
 
-            {/* Content Overlay */}
-            <div className="relative z-10 max-w-xl text-left space-y-4">
+          {/* Content Overlay */}
+          <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pb-16 text-left">
+            <div className="max-w-xl space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#9bf00b]">
                 <HardDrive className="w-4 h-4 text-[#9bf00b]" />
                 <span>XPLAY DIRECTSTORAGE VAULT</span>
@@ -244,20 +235,19 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* ============================================================== */}
       {/* 3. SECTION 3: XPLAY MODE ON, WORK MODE OFF                     */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#111111] select-none border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto space-y-16">
+      <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
+        <div className="max-w-[1600px] w-full mx-auto space-y-16">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left: Setup Image */}
             <div className="lg:col-span-7">
-              <div className="rounded-2xl overflow-hidden">
+              <div className="overflow-hidden">
                 <img
                   src="https://cms-assets.xboxservices.com/assets/30/db/30db423c-1fc1-4552-aa76-76b7d534239d.png?n=Xbox-On-PC_Xbox-Mode_Hero-1084_1920x720_01.png"
                   alt="XPlay mode on, work mode off setup"
@@ -296,14 +286,14 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           </div>
 
           {/* 5 Featured Games Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-4">
             {featuredGamesRow.map((g, idx) => (
               <div 
                 key={idx}
                 className="group cursor-pointer space-y-2 text-left"
                 onClick={() => onOpenPreOrder?.('student')}
               >
-                <div className="aspect-[2/3] rounded-xl overflow-hidden border border-white/10 group-hover:border-[#107c10] transition-all group-hover:scale-105 duration-300 shadow-lg bg-black">
+                <div className="aspect-[2/3] overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl bg-black">
                   <img src={g.img} alt={g.title} className="w-full h-full object-cover" />
                 </div>
                 <h4 className="text-xs font-bold text-white group-hover:text-[#9bf00b] transition-colors truncate">
@@ -320,61 +310,57 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 4. SECTION 4: MADE FOR PC (WITH INTERACTIVE HOTSPOTS)          */}
+      {/* 4. SECTION 4: MADE FOR PC (FULL BLEED WITH HOTSPOTS)           */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#111111] text-center select-none border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto space-y-8">
-          
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-none">
-              MADE FOR PC
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              The XPlay PC engine is the best way to play, connect, and shop with XPlay on PC—all designed for PC players to enhance your gaming experience with XPlay.
-            </p>
-            <div className="pt-2">
+      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
+        <div className="max-w-3xl mx-auto px-6 space-y-4 mb-14">
+          <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-none">
+            MADE FOR PC
+          </h2>
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            The XPlay PC engine is the best way to play, connect, and shop with XPlay on PC—all designed for PC players to enhance your gaming experience with XPlay.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => onOpenPreOrder?.('student')}
+              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+            >
+              <span>GET THE APP</span>
+              <ChevronRight className="w-4 h-4 stroke-[3]" />
+            </button>
+          </div>
+        </div>
+
+        {/* 100% Full Bleed Edge-To-Edge Image with Hotspots */}
+        <div className="relative w-full overflow-hidden bg-black">
+          <img
+            src="https://cms-assets.xboxservices.com/assets/a4/bd/a4bd7896-2fd6-4f31-bd98-4c3a964cecf6.jpg?n=2438801_Image-1084_Made-for-PC_3840x1890_03.jpg"
+            alt="Made For PC Setup"
+            className="w-full h-auto object-cover"
+          />
+
+          {/* Interactive Hotspot Plus Buttons */}
+          {hotspots.map((h) => (
+            <div 
+              key={h.id} 
+              className="absolute"
+              style={{ top: h.top, left: h.left }}
+            >
               <button
-                onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+                onClick={() => setActiveHotspot(activeHotspot === h.id ? null : h.id)}
+                className="w-8 h-8 rounded-full bg-black/80 border-2 border-white text-white hover:bg-[#107c10] hover:border-[#107c10] flex items-center justify-center transition-all cursor-pointer shadow-xl hover:scale-110"
               >
-                <span>GET THE APP</span>
-                <ChevronRight className="w-4 h-4 stroke-[3]" />
+                <Plus className="w-4 h-4 stroke-[3]" />
               </button>
+
+              {activeHotspot === h.id && (
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 p-3.5 rounded-xl bg-slate-950/95 border border-white/20 text-left shadow-2xl backdrop-blur-md z-30">
+                  <span className="text-xs font-bold text-[#9bf00b] block">{h.label}</span>
+                  <p className="text-[11px] text-slate-300 mt-1 leading-snug">{h.desc}</p>
+                </div>
+              )}
             </div>
-          </div>
-
-          {/* Large Made For PC Image with Hotspots */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-            <img
-              src="https://cms-assets.xboxservices.com/assets/a4/bd/a4bd7896-2fd6-4f31-bd98-4c3a964cecf6.jpg?n=2438801_Image-1084_Made-for-PC_3840x1890_03.jpg"
-              alt="Made For PC Setup"
-              className="w-full h-auto object-cover"
-            />
-
-            {/* Interactive Hotspot Plus Buttons */}
-            {hotspots.map((h) => (
-              <div 
-                key={h.id} 
-                className="absolute"
-                style={{ top: h.top, left: h.left }}
-              >
-                <button
-                  onClick={() => setActiveHotspot(activeHotspot === h.id ? null : h.id)}
-                  className="w-8 h-8 rounded-full bg-black/80 border-2 border-white text-white hover:bg-[#107c10] hover:border-[#107c10] flex items-center justify-center transition-all cursor-pointer shadow-xl hover:scale-110"
-                >
-                  <Plus className="w-4 h-4 stroke-[3]" />
-                </button>
-
-                {activeHotspot === h.id && (
-                  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-60 p-3 rounded-xl bg-slate-950/95 border border-white/20 text-left shadow-2xl backdrop-blur-md z-30">
-                    <span className="text-xs font-bold text-[#9bf00b] block">{h.label}</span>
-                    <p className="text-[11px] text-slate-300 mt-1 leading-snug">{h.desc}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
+          ))}
         </div>
       </section>
 
@@ -383,54 +369,53 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       <section 
         id="game-hud" 
-        className="py-24 px-6 sm:px-12 bg-[#111111] select-none border-t border-white/5 relative"
+        className="w-full min-h-[750px] py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5 relative flex items-center"
         style={{
           backgroundImage: `url('https://cms-assets.xboxservices.com/assets/48/6a/486ac4a6-3d1d-4caf-aa97-a125cf4d9d36.jpg?n=2438801_Hero-multi-feature-1400_performance_3840x2160.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-black/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-[2px]" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto space-y-12">
-          
-          <div className="max-w-2xl text-left space-y-4">
-            <h2 className="text-3xl sm:text-5xl font-black text-white font-round-bold uppercase leading-tight">
-              Maximize PC gameplay <br />
-              with XPlay HUD
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Press Shift+F2 or your XPlay controller guide button to open the HUD overlay. Instantly access widgets to find new teammates with LFG, monitor applications and chat with friends across XPlay on PC and mobile—all without leaving your game.
-            </p>
+        <div className="relative z-10 max-w-[1600px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left: Dynamic HUD Screenshot */}
+          <div className="lg:col-span-8 overflow-hidden">
+            <img
+              src={hudTabs[activeHudTab].image}
+              alt={hudTabs[activeHudTab].name}
+              className="w-full h-auto object-cover rounded-xl shadow-2xl"
+            />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Left: Tab Image Showcase */}
-            <div className="lg:col-span-8 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-              <img
-                src={hudTabs[activeHudTab].image}
-                alt={hudTabs[activeHudTab].name}
-                className="w-full h-auto object-cover"
-              />
+          {/* Right: Typography and Vertical Tabs with Green Indicator */}
+          <div className="lg:col-span-4 space-y-6 text-left">
+            <div className="space-y-4">
+              <h2 className="text-3xl sm:text-5xl font-black text-white font-round-bold uppercase leading-tight">
+                Maximize PC gameplay <br />
+                with XPlay HUD
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Press Shift+F2 or your XPlay controller guide button to open the HUD overlay. Instantly access widgets to find new teammates with LFG, monitor applications and chat with friends across XPlay on PC and mobile—all without leaving your game.
+              </p>
             </div>
 
-            {/* Right: Vertical Tab List with Green Bar */}
-            <div className="lg:col-span-4 space-y-4 text-left">
+            <div className="space-y-2 pt-2">
               {hudTabs.map((tab, idx) => (
                 <div 
                   key={tab.id}
                   onClick={() => setActiveHudTab(idx)}
-                  className={`p-4 rounded-xl cursor-pointer transition-all border-l-4 ${
+                  className={`p-3.5 rounded-lg cursor-pointer transition-all border-l-4 ${
                     activeHudTab === idx
-                      ? 'border-[#107c10] bg-white/10 text-white'
+                      ? 'border-[#107c10] bg-white/10 text-white font-bold'
                       : 'border-transparent text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <h3 className="text-lg font-bold uppercase tracking-wider">
+                  <h3 className="text-base sm:text-lg uppercase tracking-wider">
                     {tab.name}
                   </h3>
                   {activeHudTab === idx && (
-                    <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                    <p className="text-xs text-slate-300 mt-1.5 leading-relaxed font-normal">
                       {tab.desc}
                     </p>
                   )}
@@ -438,79 +423,71 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
       {/* ============================================================== */}
-      {/* 6. SECTION 6: ROG ALLY X & ROG ALLY (HANDHELD)                 */}
+      {/* 6. SECTION 6: ROG ALLY X & ROG ALLY (FULL BLEED HANDHELD)      */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#111111] text-center select-none border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto space-y-8">
-          
-          <div className="max-w-2xl mx-auto space-y-4">
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
-              ROG Ally X & ROG Ally
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Experience seamless PC gaming on the go with the best of ROG and XPlay together in a gaming handheld.
-            </p>
-            <div className="pt-2">
-              <button
-                onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
-              >
-                <span>MEET ROG ALLY</span>
-                <ChevronRight className="w-4 h-4 stroke-[3]" />
-              </button>
-            </div>
+      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
+        <div className="max-w-2xl mx-auto px-6 space-y-4 mb-14">
+          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
+            ROG Ally X & ROG Ally
+          </h2>
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Experience seamless PC gaming on the go with the best of ROG and XPlay together in a gaming handheld.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => onOpenPreOrder?.('student')}
+              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+            >
+              <span>MEET ROG ALLY</span>
+              <ChevronRight className="w-4 h-4 stroke-[3]" />
+            </button>
           </div>
+        </div>
 
-          {/* Handheld Video / Image Container */}
-          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="https://cms-assets.xboxservices.com/assets/f5/9c/f59c8397-1724-4362-9b8c-0c8433a67628.jpg?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.jpg"
-              className="w-full h-auto object-cover"
-              src="https://cms-assets.xboxservices.com/assets/d7/8c/d78c75f7-06fb-4693-8ee5-29d9196181c9.mp4?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.mp4"
-            />
-          </div>
-
+        {/* 100% Full Bleed Edge-To-Edge Handheld Video */}
+        <div className="w-full overflow-hidden bg-black">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://cms-assets.xboxservices.com/assets/f5/9c/f59c8397-1724-4362-9b8c-0c8433a67628.jpg?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.jpg"
+            className="w-full h-auto object-cover"
+            src="https://cms-assets.xboxservices.com/assets/d7/8c/d78c75f7-06fb-4693-8ee5-29d9196181c9.mp4?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.mp4"
+          />
         </div>
       </section>
 
       {/* ============================================================== */}
-      {/* 7. SECTION 7: PLAY WITH XPLAY ANYWHERE                         */}
+      {/* 7. SECTION 7: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#111111] text-center select-none border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto space-y-12">
-          
-          <div>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
-              PLAY WITH XPLAY ANYWHERE
-            </h2>
-            <div className="w-16 h-1 bg-[#107c10] mx-auto mt-4 rounded-full" />
-          </div>
+      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 mb-14">
+          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
+            PLAY WITH XPLAY ANYWHERE
+          </h2>
+          <div className="w-16 h-1 bg-[#107c10] mx-auto mt-4 rounded-full" />
+        </div>
 
-          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-            <img
-              src="https://cms-assets.xboxservices.com/assets/bd/f0/bdf0c90e-42b5-493d-bc20-15ce6f3b3259.jpg?n=Xbox-on-PC_Image-1084_XPA-ROG_1920x720.jpg"
-              alt="Play with XPlay anywhere hardware ecosystem"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
+        {/* 100% Full Bleed Edge-To-Edge Image */}
+        <div className="w-full overflow-hidden bg-black">
+          <img
+            src="https://cms-assets.xboxservices.com/assets/bd/f0/bdf0c90e-42b5-493d-bc20-15ce6f3b3259.jpg?n=Xbox-on-PC_Image-1084_XPA-ROG_1920x720.jpg"
+            alt="Play with XPlay anywhere hardware ecosystem"
+            className="w-full h-auto object-cover"
+          />
         </div>
       </section>
 
       {/* ============================================================== */}
       {/* 8. SECTION 8: 3-COLUMN FEATURE PILLARS                         */}
       {/* ============================================================== */}
-      <section className="py-20 px-6 sm:px-12 bg-[#111111] select-none border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+      <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
           
           <div className="space-y-4">
             <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold uppercase leading-tight">
@@ -557,13 +534,13 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 9. SECTION 9: FREQUENTLY ASKED QUESTIONS (DARK THEME)          */}
+      {/* 9. SECTION 9: FREQUENTLY ASKED QUESTIONS                       */}
       {/* ============================================================== */}
-      <section id="faqs" className="py-24 px-6 sm:px-12 bg-[#111111] select-none border-t border-white/5">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section id="faqs" className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
+        <div className="max-w-[1200px] mx-auto space-y-12">
           
           <div className="text-left space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white font-round-bold">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold">
               Frequently Asked Questions
             </h2>
           </div>
@@ -590,8 +567,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             ))}
           </div>
 
-          {/* Pre-order reservation banner */}
-          <div className="p-8 sm:p-12 rounded-2xl bg-black border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-2xl">
+          {/* Full Width Reservation Banner */}
+          <div className="p-8 sm:p-12 rounded-xl bg-black border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-2xl">
             <div>
               <span className="text-xs font-mono font-bold text-[#9bf00b] uppercase tracking-widest block mb-1">
                 LIMITED INTRODUCTORY BATCH
