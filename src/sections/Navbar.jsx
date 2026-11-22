@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Sparkles, LogIn, ArrowRight } from 'lucide-react';
 
 const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
+  const location = useLocation();
+  const isLight = location.pathname.startsWith('/consoles/student');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -53,7 +55,11 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center md:px-16 md:py-8 p-5 z-[100] transition-all select-none">
+    <nav className={`fixed top-0 left-0 w-full flex justify-between items-center md:px-16 md:py-6 p-4 z-[100] transition-all select-none ${
+      isLight 
+        ? 'bg-white/85 backdrop-blur-xl border-b border-slate-200/80 shadow-xs' 
+        : ''
+    }`}>
       {/* Clean Delicate X Logo */}
       <Link to="/" onClick={() => setDropdownOpen(false)} className="flex items-center">
         <img
@@ -64,7 +70,9 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
       </Link>
 
       {/* Nav Menu */}
-      <div className="flex items-center gap-6 sm:gap-8 font-round-bold text-white text-xs sm:text-sm uppercase tracking-widest">
+      <div className={`flex items-center gap-6 sm:gap-8 font-round-bold text-xs sm:text-sm uppercase tracking-widest ${
+        isLight ? 'text-slate-800' : 'text-white'
+      }`}>
 
         {/* Consoles dropdown */}
         <div
@@ -75,10 +83,14 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
         >
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors cursor-pointer py-2"
+            className={`flex items-center gap-1.5 transition-colors cursor-pointer py-2 ${
+              isLight ? 'hover:text-sky-600' : 'hover:text-cyan-300'
+            }`}
           >
             <span>Consoles</span>
-            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-cyan-400' : 'text-white/70'}`} />
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
+              dropdownOpen ? 'rotate-180 text-sky-600' : isLight ? 'text-slate-500' : 'text-white/70'
+            }`} />
           </button>
 
           {dropdownOpen && (
@@ -157,31 +169,39 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
           )}
         </div>
 
-        <a href="#about" className="hover:text-yellow transition-colors hidden md:inline-block">
+        <a href="#about" className={`transition-colors hidden md:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
           Hardware
         </a>
 
-        <a href="#consoles" className="hover:text-yellow transition-colors hidden md:inline-block">
+        <a href="#consoles" className={`transition-colors hidden md:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
           Editions
         </a>
 
-        <a href="#games" className="hover:text-yellow transition-colors hidden sm:inline-block">
+        <a href="#games" className={`transition-colors hidden sm:inline-block ${isLight ? 'hover:text-sky-600' : 'hover:text-yellow'}`}>
           Games
         </a>
 
         <button
           onClick={() => onOpenPreOrder?.('pro')}
-          className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-sky-500/20 cursor-pointer"
+          className={`hidden sm:inline-flex items-center px-4 py-2 rounded-full font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer ${
+            isLight 
+              ? 'bg-slate-900 hover:bg-sky-600 text-white shadow-slate-900/10' 
+              : 'bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 shadow-sky-500/20'
+          }`}
         >
           Pre-Order
         </button>
 
         <button
           onClick={() => onOpenLogin?.()}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300 font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-md cursor-pointer ml-1"
+          className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-sm cursor-pointer ml-1 ${
+            isLight 
+              ? 'border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:text-sky-600' 
+              : 'border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300'
+          }`}
           aria-label="Login"
         >
-          <LogIn className="w-3.5 h-3.5 text-cyan-400" />
+          <LogIn className={`w-3.5 h-3.5 ${isLight ? 'text-sky-600' : 'text-cyan-400'}`} />
           <span>Login</span>
         </button>
       </div>
