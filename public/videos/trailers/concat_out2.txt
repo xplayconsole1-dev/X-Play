@@ -1,0 +1,2 @@
+file 'c:/Users/Lenovo/Desktop/Game/GTA-VI/public/videos/trailers/c3_mk.mp4'
+file 'c:/Users/Lenovo/Desktop/Game/GTA-VI/public/videos/trailers/c4_hogwarts.mp4'

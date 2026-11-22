@@ -1,0 +1,2 @@
+file 'c:/Users/Lenovo/Desktop/Game/GTA-VI/public/videos/trailers/c1_spiderman.mp4'
+file 'c:/Users/Lenovo/Desktop/Game/GTA-VI/public/videos/trailers/c2_forza.mp4'
