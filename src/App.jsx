@@ -85,8 +85,6 @@ const HomePage = ({ onOpenPreOrder }) => {
 };
 
 const App = () => {
-  const location = useLocation();
-  const isXboxPage = location.pathname === '/consoles/student';
   const [preOrderOpen, setPreOrderOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const [selectedEdition, setSelectedEdition] = useState('pro');
@@ -100,13 +98,11 @@ const App = () => {
     <main>
       <ScrollToTop />
 
-      {/* Floating Rockstar Navbar with Consoles Dropdown (Hidden on dedicated Xbox on PC page) */}
-      {!isXboxPage && (
-        <Navbar 
-          onOpenPreOrder={handleOpenPreOrder} 
-          onOpenLogin={() => setLoginOpen(true)} 
-        />
-      )}
+      {/* Floating XPlay Navbar with Consoles Dropdown */}
+      <Navbar 
+        onOpenPreOrder={handleOpenPreOrder} 
+        onOpenLogin={() => setLoginOpen(true)} 
+      />
 
       {/* Route Views */}
       <ErrorBoundary>

@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ChevronDown,
-  ChevronRight,
-  ExternalLink,
-  Sliders,
-  Volume2,
-  Camera,
-  LayoutGrid,
-  Search,
-  ShoppingCart,
-  User,
-  Plus,
-  Minus
+import { 
+  ChevronRight, 
+  ExternalLink, 
+  Sliders, 
+  Volume2, 
+  Camera, 
+  LayoutGrid, 
+  ShieldCheck, 
+  HardDrive, 
+  Zap, 
+  Cpu, 
+  Thermometer, 
+  Gamepad2, 
+  Sparkles, 
+  Plus, 
+  Minus 
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import GamingFooter from '../sections/GamingFooter';
 
 const StudentEditionPage = ({ onOpenPreOrder }) => {
   const [activeGameBarTab, setActiveGameBarTab] = useState(0);
@@ -30,165 +34,113 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       name: 'Performance',
       icon: <Sliders className="w-4 h-4" />,
       image: 'https://cms-assets.xboxservices.com/assets/ff/ad/ffad9f8e-5c10-4823-981e-fe570350e521.jpg?n=2438801_Hero-multi-feature-0_Performance_767x431.jpg',
-      title: 'Balance system resources to maximise performance.',
-      desc: 'Tap Win+Alt+B to turn the system HDR on or off and for supported PC games, adjust Auto-HDR and intensity.'
+      title: 'Real-time 60 FPS & Hardware Telemetry',
+      desc: 'Track frame rates, GPU clock speed, CPU temperature, and RAM allocation in real time with zero frame pacing penalties.'
     },
     {
       id: 'audio',
-      name: 'Audio',
+      name: 'Audio Mixer',
       icon: <Volume2 className="w-4 h-4" />,
       image: 'https://cms-assets.xboxservices.com/assets/c8/47/c84729a6-106a-4d3d-b5dd-036858cea164.jpg?n=2438801_Hero-multi-feature-0_Audio_767x431.jpg',
-      title: 'Set volumes for your PC, microphone, game and music.',
-      desc: 'Set volumes for your PC, microphone, game and music without leaving your game.'
+      title: 'Game & Discord Voice Channel Balancer',
+      desc: 'Balance in-game sound effects, Discord voice chat, and background music without alt-tabbing or leaving your match.'
     },
     {
       id: 'capture',
       name: 'Capture',
       icon: <Camera className="w-4 h-4" />,
       image: 'https://cms-assets.xboxservices.com/assets/30/f1/30f1e1e9-3d4b-4f2d-a774-2beb60b07c71.jpg?n=2438801_Hero-multi-feature-0_Capture_767x431.jpg',
-      title: 'Instantly take screenshots and video captures.',
-      desc: 'Instantly take screenshots and video captures to share your achievements with friends.'
+      title: 'Instant 1080p 60 FPS Replay & Screenshot Capture',
+      desc: 'Record your best clutch kills and high-speed maneuvers in crisp 1080p directly saved onto the XPlay drive.'
     },
     {
-      id: 'widgets',
-      name: 'Widgets',
+      id: 'optimizations',
+      name: 'RAM Boost',
       icon: <LayoutGrid className="w-4 h-4" />,
       image: 'https://cms-assets.xboxservices.com/assets/3a/10/3a10b744-c6f1-47f4-a124-712647130d5c.jpg?n=2438801_Hero-multi-feature-0_widgets_767x431.jpg',
-      title: 'Personalise, select, hide, or move widgets.',
-      desc: 'Play tunes with Spotify, get game overlays and add more options from the Widget Store.'
+      title: 'One-Click Background Task Suspension',
+      desc: 'Automatically suspend background college tabs and heavy apps to free up to 3.5GB of RAM for dedicated game rendering.'
     }
   ];
 
   const faqs = [
     {
-      q: 'What XBOX games are available to play on PC?',
-      a: 'The XBOX PC app has thousands of games to discover and play on your PC, including hundreds of titles available with XBOX Game Pass. Check out the XBOX on PC library here and the Game Pass library here. For XPlay Student Edition users, your package includes 1x full AAA digital game key permanently redeemable into your personal Steam/Epic account.'
+      q: 'Does XPlay Student Edition require an expensive gaming laptop?',
+      a: 'No. XPlay was engineered specifically for everyday student laptops and budget PCs. Its bare-metal DirectStorage architecture offloads heavy storage I/O and asset decompression directly into the fast NVMe stream, unlocking smooth 60 FPS gameplay on standard hardware without thermal throttling.'
     },
     {
-      q: 'What XBOX games are supported to play on PC?',
-      a: 'All natively supported PC games, and all XBOX Play Anywhere titles, which allow you to bring your favourites across XBOX console and XBOX on PC while keeping your in-game progress. You can play these games on PC with your friends across all supported devices.'
+      q: 'Is the included AAA game permanent and registered to my account?',
+      a: 'Yes, 100% permanent. Your XPlay Student Edition package includes a genuine digital license key for 1x full AAA title (such as GTA V, Forza Horizon 5, or Cyberpunk 2077) that permanently links to your personal Steam, Epic Games, or Rockstar account. You retain full lifetime ownership, cloud saves, and multiplayer access.'
     },
     {
-      q: 'How do I play XBOX on PC games on Windows?',
-      a: 'Download or open the XBOX PC app to install and play the latest games, access the Game Pass library and leverage your in-game benefits for some of the best games, including free-to-play titles. Plug in the XPlay Student Edition 250GB drive for direct 60 FPS play with zero host drive wear.'
+      q: 'Will XPlay touch my college assignments, projects, or host Windows OS?',
+      a: 'Never. XPlay operates under strict hardware SAN Policy 4 isolation. Your laptop internal SSD/HDD and college Windows installation remain 100% read-safe, untouched, and unindexed. When you disconnect XPlay, your laptop returns to its normal study setup with zero residual footprints.'
     },
     {
-      q: 'How do I know if the XBOX PC app is already installed on my computer?',
-      a: 'The XBOX PC app is pre-installed on most Windows 11 PCs. You can check if the XBOX PC app is pre-installed by searching for "Xbox" in your Windows toolbar, or by opening your Windows Start button and searching for "Xbox."'
+      q: 'Can I connect my own controller or mouse and keyboard?',
+      a: 'Yes. The Student Edition is designed as a standalone drive so you can bring whatever input you love: Xbox Wireless Controller, PS5 DualSense, Cosmic Byte, Redgear, or standard mouse and keyboard. Full native input mapping is pre-calibrated.'
     },
     {
-      q: 'Can I cross-play on PC with other platforms outside of XBOX?',
-      a: 'Yes. If the game supports cross-play, you can play your favourite XBOX games with your friends, regardless of where they play.'
+      q: 'What comes inside the XPlay Student Edition box?',
+      a: 'The box includes the XPlay 250GB Satin Silver Aluminum CNC Console Drive, dual high-durability braided cables (USB-C to USB-C and USB-C to USB-A 3.2 Gen 2), QuickStart setup manual, 1-Year replacement warranty card, and your digital AAA game activation voucher.'
     },
     {
-      q: 'What type of computer do I need to play XBOX on PC games?',
-      a: 'A Windows PC running Windows 10/11 with version 22H2, or higher installed. You’ll also want at least 150MB of storage for the XBOX PC app (plus additional space for games) and a display resolution of 720p or higher. System requirements may vary by game and performance scales with higher-end systems. If your PC is in Windows S mode, you’ll need to switch out of it to play games via the XBOX PC app.'
-    },
-    {
-      q: 'Where do I get additional Windows PC gaming assistance?',
-      a: 'Visit the PC Gaming support hub for help, troubleshooting, and hardware setup.'
-    },
-    {
-      q: 'What is the best XBOX controller for PC games?',
-      a: 'We are biased and we think the XBOX Wireless Controller and XBOX Elite Wireless Controller Series 2 are the best for XBOX on PC gaming. You can also use any one of our Designed for XBOX partner controllers.'
-    },
-    {
-      q: 'Can I stream cloud gaming on a Mac?',
-      a: 'Yes, open Safari or your favourite browser and go to Xbox.com/play to get started.'
+      q: 'What is the warranty and customer support coverage?',
+      a: 'Every XPlay Console comes with a 1-Year Comprehensive Replacement Warranty with free reverse pickup across India, plus dedicated 24/7 direct engineer support on WhatsApp for quick hardware or game configuration help.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#f5f5f5] font-sans antialiased selection:bg-[#107c10] selection:text-white">
+    <div className="min-h-screen bg-[#050505] text-[#f5f5f5] font-sans antialiased selection:bg-cyan-500 selection:text-black">
       <SEO
-        title="XBOX on PC | Elevate your PC gaming experience with XBOX"
-        description="Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC with XBOX and XPlay Student Edition."
-        keywords="Xbox on PC, Xbox PC gaming, PC Game Pass, Xbox Game Bar, XPlay Student Edition"
+        title="XPlay Student Edition | 250GB DirectStorage Gaming Drive"
+        description="Transform any college laptop or budget PC into a 60 FPS gaming powerhouse. Includes 250GB fast SSD and 1x full AAA game key for ₹6,999."
+        keywords="XPlay Student Edition, 250GB Gaming Drive, Budget PC Gaming, DirectStorage NVMe, College Laptop Gaming"
       />
 
       {/* ============================================================== */}
-      {/* 1. OFFICIAL MICROSOFT UHF GLOBAL HEADER (EXACT 1:1)            */}
+      {/* 1. XPLAY STUDENT EDITION SUB-NAVBAR                            */}
       {/* ============================================================== */}
-      <header className="w-full bg-[#111111] text-white z-50 relative select-none border-b border-[#222]">
-
-        {/* Row 1: Universal Microsoft Header */}
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 h-12 flex items-center justify-between text-xs border-b border-[#222]">
-          <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
-              {/* Microsoft Official SVG */}
-              <svg className="w-24 h-5" viewBox="0 0 108 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="1" width="10" height="10" fill="#F25022" />
-                <rect x="12" y="1" width="10" height="10" fill="#7FBA00" />
-                <rect x="0" y="13" width="10" height="10" fill="#00A4EF" />
-                <rect x="12" y="13" width="10" height="10" fill="#FFB900" />
-                <text x="28" y="17" fill="#ffffff" fontFamily="Segoe UI, -apple-system, sans-serif" fontSize="15" fontWeight="600">Microsoft</text>
-              </svg>
-            </Link>
-            <span className="text-[#444]">|</span>
-            <div className="flex items-center gap-2 text-white">
-              {/* Xbox Green Sphere Logo */}
-              <svg className="w-5 h-5 text-[#107c10] fill-current" viewBox="0 0 24 24">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.898 4.295c1.233-.008 2.502.196 3.693.633 1.094.401 1.777.94 1.777.94s-1.854 2.213-3.666 4.367c-1.353-1.608-2.618-3.111-3.626-4.307 0 0 .626-.541 1.822-.633zm-4.707 2.47c1.323 1.494 3.037 3.435 4.631 5.242-2.176 2.586-4.524 5.383-6.289 7.481C2.109 17.273 1.08 14.773 1.08 12c0-2.025.568-3.921 1.628-5.545.687.273 1.34.453 1.907.31zm17.21 0c1.06 1.624 1.628 3.52 1.628 5.545 0 2.773-1.029 5.273-2.657 7.488-1.765-2.098-4.113-4.895-6.289-7.481 1.594-1.807 3.308-3.748 4.631-5.242.567.14 1.22-.04 1.907-.31-.02-.002.049.004-.22.002zM12 13.916c2.053 2.44 4.35 5.176 5.895 7.009-1.774 1.32-3.968 2.075-6.395 2.075s-4.621-.755-6.395-2.075c1.545-1.833 3.842-4.569 5.895-7.009z" />
-              </svg>
-              <span className="font-bold tracking-wider text-xs uppercase">XBOX</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-6 text-[#ccc] text-xs">
-            <Link to="/" className="hover:text-white transition-colors">XPlay Home</Link>
-            <Link to="/consoles" className="hover:text-white transition-colors">All Consoles</Link>
-            <span className="hover:text-white transition-colors cursor-pointer hidden md:inline">Game Pass</span>
-            <span className="hover:text-white transition-colors cursor-pointer hidden md:inline">Games</span>
-            <span className="hover:text-white transition-colors cursor-pointer hidden md:inline">Devices</span>
-            <span className="hover:text-white transition-colors cursor-pointer hidden md:inline">Support</span>
-          </div>
-        </div>
-
-        {/* Row 2: Exact Xbox on PC Page Sub-Header */}
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <span className="font-black text-sm tracking-widest text-white uppercase flex items-center gap-2">
-              <span>XBOX ON PC</span>
-              <span className="text-[10px] font-mono font-bold bg-[#107c10] text-white px-2 py-0.5 rounded-[2px]">
-                STUDENT
-              </span>
-            </span>
-
-            <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-[#ccc]">
-              <a href="#hero" className="hover:text-[#9bf00b] transition-colors">Overview</a>
-              <a href="#better-together" className="hover:text-[#9bf00b] transition-colors">Game Pass</a>
-              <a href="#xbox-mode" className="hover:text-[#9bf00b] transition-colors">XBOX Mode</a>
-              <a href="#made-for-pc" className="hover:text-[#9bf00b] transition-colors">Made for PC</a>
-              <a href="#game-bar" className="hover:text-[#9bf00b] transition-colors">Game Bar</a>
-              <a href="#handheld" className="hover:text-[#9bf00b] transition-colors">Hardware</a>
-              <a href="#faq" className="hover:text-[#9bf00b] transition-colors">FAQ</a>
-            </nav>
-          </div>
-
+      <div className="w-full bg-[#0a0e17]/95 backdrop-blur-md border-b border-white/10 sticky top-20 z-40 select-none">
+        <div className="max-w-[1500px] mx-auto px-4 sm:px-8 h-12 flex items-center justify-between text-xs">
           <div className="flex items-center gap-4">
-            <div className="text-right hidden sm:block">
-              <span className="text-sm font-black font-mono text-white">₹6,999</span>
-              <span className="text-[10px] text-emerald-400 font-bold block leading-none">Launch Offer</span>
-            </div>
+            <span className="font-black text-sm tracking-widest text-white uppercase flex items-center gap-2">
+              <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">XPLAY</span>
+              <span>STUDENT EDITION</span>
+            </span>
+            <span className="hidden sm:inline-block text-[10px] font-mono font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30 px-2 py-0.5 rounded">
+              250GB SSD • ₹6,999
+            </span>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-5 text-[#aaa] font-semibold text-xs">
+              <a href="#backtotop" className="hover:text-cyan-400 transition-colors">Overview</a>
+              <a href="#game-included" className="hover:text-cyan-400 transition-colors">Game Included</a>
+              <a href="#gaming-mode" className="hover:text-cyan-400 transition-colors">Game Mode</a>
+              <a href="#engineered-for-pc" className="hover:text-cyan-400 transition-colors">Specs</a>
+              <a href="#game-hud" className="hover:text-cyan-400 transition-colors">XPlay HUD</a>
+              <a href="#faqs" className="hover:text-cyan-400 transition-colors">FAQ</a>
+            </nav>
+
             <button
               onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-[2px] transition-all cursor-pointer shadow-md"
+              className="bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-400 hover:to-cyan-400 text-slate-950 font-black text-[11px] uppercase tracking-wider px-4 py-2 rounded-full transition-all cursor-pointer shadow-md active:scale-95"
             >
-              GET THE APP
+              PRE-ORDER ₹6,999
             </button>
           </div>
         </div>
-
-      </header>
+      </div>
 
       {/* ============================================================== */}
-      {/* 2. SECTION 1: EXACT 1:1 HERO ITEM (#backtotop)                */}
+      {/* 2. SECTION 1: HERO ITEM (#backtotop)                           */}
       {/* ============================================================== */}
       <section 
         id="backtotop" 
-        className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-black border-b border-[#222]"
+        className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-black border-b border-white/10"
       >
-        {/* Full-bleed Ambient Video Background (Exact URL from Xbox on PC) */}
+        {/* Full-bleed Ambient Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
             autoPlay
@@ -199,50 +151,60 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             className="w-full h-full object-cover object-center"
             src="https://cms-assets.xboxservices.com/assets/d8/2f/d82f2cf2-4d36-426e-ac14-9a89340d1fb3.mp4?n=2438801_Super-Hero-1084_1920x1080_02.mp4"
           />
-          {/* Subtle dark gradient overlay to ensure text readability exactly as on xbox.com */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent lg:w-3/4" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+          {/* Subtle dark gradient overlay to ensure crystal clear typography */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent lg:w-4/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         </div>
 
-        {/* Content Container (f-x-left f-y-center) */}
-        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 py-20">
+        {/* Content Container */}
+        <div className="relative z-10 max-w-[1500px] w-full mx-auto px-6 sm:px-12 md:px-16 py-24">
           <div className="max-w-2xl space-y-6 text-left">
             
-            {/* H1 Heading (Exact class c-heading-1a from Xbox) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none">
-              XBOX ON PC
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 text-xs font-bold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span>COLLEGE STUDENTS & ESPORTS LINEUP</span>
+            </div>
+
+            {/* H1 Heading */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none">
+              XPLAY ON PC <br />
+              <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 bg-clip-text text-transparent">
+                STUDENT EDITION
+              </span>
             </h1>
 
-            {/* Subheading / Description (Exact copy from Xbox on PC) */}
+            {/* Description */}
             <p className="text-[#e5e7eb] text-base sm:text-lg font-normal leading-relaxed">
-              Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC. Whether you're playing on a high-end rig, budget-friendly laptop, or anything in between, and whether you prefer a mouse and keyboard or an XBOX controller, we've got you covered.
+              Transform any everyday college laptop or budget desktop into an uncompromised 60 FPS gaming sanctuary. Plug in your XPlay Student Drive, boot instantly into high-speed NVMe DirectStorage architecture, and enjoy uncompressed AAA gaming with zero host drive wear.
             </p>
 
-            {/* Call To Action Button (Exact c-call-to-action from Xbox) */}
+            {/* Call To Action Button */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#107c10]/40 inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-400 hover:to-cyan-400 active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-cyan-500/30 inline-flex items-center gap-2"
               >
-                <span>GET THE APP</span>
+                <span>GET STUDENT EDITION — ₹6,999</span>
                 <ChevronRight className="w-4 h-4 stroke-[3]" />
               </button>
 
-              <span className="text-xs text-[#9bf00b] font-mono font-bold">
-                Student Edition: 250GB SSD Included (₹6,999)
-              </span>
+              <div className="flex items-center gap-2 text-xs text-slate-300 font-mono">
+                <span className="text-emerald-400 font-bold">1x Full AAA Game Included</span>
+                <span>•</span>
+                <span>250GB DirectStorage SSD</span>
+              </div>
             </div>
 
-            {/* Legal Copy (Exact copy and links from Xbox on PC) */}
+            {/* Legal Copy */}
             <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
-              Requires Windows 10/11, version 22H2 or higher.{' '}
-              <a href="#made-for-pc" className="text-white underline hover:text-[#9bf00b] transition-colors">
-                See system requirements.
+              Requires Windows 10/11 laptop or desktop with USB 3.0 or Type-C port.{' '}
+              <a href="#engineered-for-pc" className="text-white underline hover:text-cyan-400 transition-colors">
+                See hardware requirements.
               </a>
               <br className="hidden sm:inline" />
-              {' '}Having trouble installing the update or app?{' '}
-              <a href="https://support.xbox.com" target="_blank" rel="noreferrer" className="text-white underline hover:text-[#9bf00b] transition-colors">
-                Get help here.
+              {' '}Questions before ordering?{' '}
+              <a href="#faqs" className="text-white underline hover:text-cyan-400 transition-colors">
+                Read student FAQs.
               </a>
             </p>
 
@@ -251,39 +213,40 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 3. SECTION 2: GET AN INSTANT LIBRARY ON PC (#better-together)  */}
+      {/* 3. SECTION 2: 1x AAA DIGITAL GAME INCLUDED (#game-included)   */}
       {/* ============================================================== */}
       <section 
-        id="better-together" 
-        className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-[#222] relative"
+        id="game-included" 
+        className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-white/10 relative"
       >
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
+          
           <div className="lg:col-span-6 space-y-6 text-left">
-            <img
-              src="https://cms-assets.xboxservices.com/assets/36/e9/36e956dc-8d8a-41d2-95be-5d347e87972b.svg?n=XGP-Logo_Image-0_350x_01.svg"
-              alt="XBOX Game Pass logo"
-              className="h-10 w-auto object-contain"
-            />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold tracking-wider uppercase">
+              <ShieldCheck className="w-4 h-4" />
+              <span>PERMANENT DIGITAL OWNERSHIP</span>
+            </div>
 
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
-              Get an instant library on PC
+              1x AAA Digital Game <br />
+              <span className="text-emerald-400">Included In The Box</span>
             </h2>
 
             <p className="text-[#d1d5db] text-base leading-relaxed">
-              XBOX Game Pass unlocks immediate access to hundreds of high-quality games and more. Install and play new games on day one and enjoy in-game benefits for the biggest games. Want to own the games you love? Enjoy discounts up to 20%.
+              Every XPlay Student Edition arrives with a genuine license code for a full AAA title of your choice. The game is permanently registered to your personal Steam, Epic Games, or Rockstar Games account with complete cloud saves, achievements, and online multiplayer.
             </p>
 
             <p className="text-sm text-[#9ca3af] leading-relaxed">
-              Included with XPlay Student Edition: <strong className="text-white">1x AAA Digital Game License</strong> permanently registered to your personal Steam, Epic Games, or Rockstar account with cloud saves and online multiplayer.
+              Play directly from the 250GB XPlay high-speed drive without consuming a single gigabyte of your laptop's internal storage for college notes, coding environments, or lectures.
             </p>
 
             <div className="pt-2">
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-[2px] transition-all cursor-pointer shadow-md"
+                className="bg-white hover:bg-slate-200 text-slate-950 font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-all cursor-pointer shadow-md inline-flex items-center gap-2"
               >
-                EXPLORE GAME PASS
+                <span>CHOOSE YOUR EDITION</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -298,8 +261,11 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 { title: 'Hogwarts Legacy', img: '/assets/games/hogwarts_cover.jpg' },
                 { title: "Marvel's Spider-Man", img: '/assets/games/spiderman_cover.jpg' },
               ].map((g, idx) => (
-                <div key={idx} className="rounded-lg overflow-hidden aspect-[2/3] bg-slate-800 border border-[#222] hover:border-[#9bf00b] transition-all hover:scale-105 duration-300 shadow-md">
+                <div key={idx} className="rounded-xl overflow-hidden aspect-[2/3] bg-slate-800 border border-white/10 hover:border-cyan-400 transition-all hover:scale-105 duration-300 shadow-xl group relative">
                   <img src={g.img} alt={g.title} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                    <span className="text-[11px] font-bold text-white truncate">{g.title}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -309,38 +275,49 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 4. SECTION 3: XBOX MODE ON, WORK MODE OFF (f-x-right)           */}
+      {/* 4. SECTION 3: STUDY MODE OFF, GAMING MODE ON (#gaming-mode)     */}
       {/* ============================================================== */}
-      <section id="xbox-mode" className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-[#222]">
+      <section id="gaming-mode" className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-white/10">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-          {/* Left Official Image from Xbox on PC */}
+          
+          {/* Left Official Image */}
           <div className="lg:col-span-7 order-2 lg:order-1">
-            <div className="rounded-lg overflow-hidden border border-[#222] shadow-2xl bg-black">
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
               <img
                 src="https://cms-assets.xboxservices.com/assets/b0/a4/b0a49731-d54c-45fd-8585-4057f8f28358.png?n=Xbox-On-PC_Xbox-Mode_Hero-0_767x431_01.png"
-                alt="A PC monitor displaying the XBOX Mode UI with an XBOX Elite Wireless Controller, keyboard and mouse beside it"
+                alt="A PC monitor displaying the gaming mode with controller, keyboard and mouse"
                 className="w-full h-auto object-cover"
               />
             </div>
           </div>
 
-          {/* Right Text Block (f-x-right) */}
+          {/* Right Text Block */}
           <div className="lg:col-span-5 space-y-6 order-1 lg:order-2 text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase">
+              <Zap className="w-3.5 h-3.5" />
+              <span>INSTANT OS SWITCHING</span>
+            </div>
+
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
-              XBOX mode on,work mode off
+              Study mode off, <br />
+              <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">gaming mode on</span>
             </h2>
 
             <p className="text-[#d1d5db] text-base leading-relaxed">
-              Get an XBOX console-inspired, controller-optimised, dedicated gaming experience on your Windows 11 PC and handheld. Seamlessly switch between XBOX mode and the desktop and play across devices with your achievements, game progress and purchases. Plus, bring all your games together from most PC storefronts.
+              Seamlessly switch between college assignments and dedicated 60 FPS console-grade gaming. With XPlay SAN Policy 4 volume isolation, your internal operating system, college coding setups, and personal files remain completely untouched and safe.
+            </p>
+
+            <p className="text-sm text-[#9ca3af] leading-relaxed">
+              When plugged in, your laptop allocates 100% of its available graphics bandwidth and RAM directly to the game with zero Windows background clutter.
             </p>
 
             <div>
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-[2px] transition-all cursor-pointer"
+                className="bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-400 hover:to-cyan-400 text-slate-950 font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-all cursor-pointer shadow-md inline-flex items-center gap-2"
               >
-                LEARN MORE
+                <span>PRE-ORDER STUDENT EDITION</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -349,48 +326,88 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 5. SECTION 4: MADE FOR PC                                      */}
+      {/* 5. SECTION 4: ENGINEERED FOR STUDENT LAPTOPS                   */}
       {/* ============================================================== */}
-      <section id="made-for-pc" className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-[#222]">
+      <section id="engineered-for-pc" className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-white/10">
         <div className="max-w-[1400px] mx-auto space-y-12">
-
+          
           <div className="max-w-3xl text-left space-y-4">
+            <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">
+              DirectStorage NVMe Architecture
+            </span>
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              MADE FOR PC
+              ENGINEERED FOR STUDENT LAPTOPS
             </h2>
             <p className="text-[#d1d5db] text-base leading-relaxed">
-              The XBOX PC app is the best way to play, connect, and shop with XBOX on PC—all designed for PC players to enhance your gaming experience with XBOX.
+              Designed by Puneet Kushwaha to break the ₹1.5 Lakh gaming hardware barrier. XPlay delivers console-level 60 FPS performance on laptops with standard integrated or dedicated graphics.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-
+            
             {/* 5 Numbered Feature Bullets */}
             <div className="lg:col-span-6 space-y-4">
               {[
-                'Quickly access your XBOX profile and manage your XBOX Game Pass subscription.',
-                'Continue your game progress from another device with cloud saves.',
-                'Discover and shop the latest games and add-ons in the Store.',
-                'Connect with friends across XBOX console, mobile and XBOX on PC and dive into group gaming experiences.',
-                'Easily connect your accessories, including XBOX controller, mouse and keyboard and headset.'
-              ].map((text, idx) => (
-                <div key={idx} className="p-4 rounded-lg bg-[#141a29] border border-[#222] flex items-start gap-3.5 hover:border-[#107c10] transition-colors">
-                  <div className="w-7 h-7 rounded-full bg-[#107c10]/20 flex items-center justify-center text-[#9bf00b] shrink-0 font-mono font-bold text-xs">
-                    0{idx + 1}
+                {
+                  num: '01',
+                  title: 'Zero Host Drive Wear',
+                  desc: 'All game assets, shaders, and patches write directly to the 250GB external SSD without taking a single byte of your laptop internal storage.'
+                },
+                {
+                  num: '02',
+                  title: 'DirectStorage 1,050 MB/s Speed',
+                  desc: 'Bypasses legacy SATA bottlenecks with sustained sequential read throughput for instantaneous asset streaming and quick boots.'
+                },
+                {
+                  num: '03',
+                  title: 'Universal Plug & Play Compatibility',
+                  desc: 'Includes dual braided USB-C and USB-A 3.2 Gen 2 cables. Works with Acer, ASUS, Dell, HP, Lenovo, and custom desktop rigs.'
+                },
+                {
+                  num: '04',
+                  title: 'Anti-Cheat & Esports Certified',
+                  desc: 'Full kernel-level support for Valorant Vanguard, CS2 VAC, and EA Anti-Cheat with zero virtual machine detection penalties.'
+                },
+                {
+                  num: '05',
+                  title: 'Passive CNC Thermal Cooling',
+                  desc: 'Aircraft-grade satin silver aluminum body dissipates heat passively, keeping drive temps under 42°C during 8-hour marathon sessions.'
+                }
+              ].map((f, i) => (
+                <div 
+                  key={i} 
+                  className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-cyan-500/50 hover:bg-white/[0.06] transition-all flex items-start gap-4 text-left group"
+                >
+                  <span className="text-cyan-400 font-mono font-black text-lg shrink-0 pt-0.5">
+                    {f.num}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-white text-base group-hover:text-cyan-300 transition-colors">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-[#9ca3af] leading-relaxed mt-1">
+                      {f.desc}
+                    </p>
                   </div>
-                  <p className="text-sm text-[#e5e7eb] font-sans leading-relaxed pt-0.5">{text}</p>
                 </div>
               ))}
             </div>
 
-            {/* Official Made for PC Image */}
+            {/* Right Hardware Visual */}
             <div className="lg:col-span-6">
-              <div className="rounded-lg overflow-hidden border border-[#222] shadow-2xl">
+              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black relative group">
                 <img
-                  src="https://cms-assets.xboxservices.com/assets/ac/f4/acf448fa-6645-4495-824f-6985af1f7c1a.jpg?n=2438801_Image-0_Made-for-PC_767x536_02.jpg"
-                  alt="A straight on view of a gaming PC complete with monitor, microphone, XBOX wireless controller, keyboard, mouse and headset"
-                  className="w-full h-auto object-cover"
+                  src="https://cms-assets.xboxservices.com/assets/71/6a/716a5b6f-6dd3-4929-9e8c-f09b5ca08779.jpg?n=2438801_Hero-multi-feature-0_1248x702.jpg"
+                  alt="Student gaming desk setup with laptop, monitor and controller"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex items-end p-8">
+                  <div className="text-left space-y-1">
+                    <span className="text-xs font-mono font-bold text-cyan-400">STUDENT EDITION HARDWARE</span>
+                    <h4 className="text-xl font-black text-white">Satin Silver Anodized CNC Enclosure</h4>
+                    <p className="text-xs text-slate-300">Pocket-sized 48 grams • Dual braided cables included</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -400,31 +417,35 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. SECTION 5: MAXIMIZE PC GAMEPLAY WITH GAME BAR               */}
+      {/* 6. SECTION 5: MAXIMIZE GAMEPLAY WITH XPLAY HUD (#game-hud)     */}
       {/* ============================================================== */}
-      <section id="game-bar" className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-[#222]">
+      <section id="game-hud" className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-white/10">
         <div className="max-w-[1400px] mx-auto space-y-12">
-
+          
           <div className="max-w-3xl text-left space-y-4">
+            <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">
+              In-Game System Overlay
+            </span>
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              Maximize PC gameplay with Game Bar
+              MAXIMIZE GAMEPLAY WITH XPLAY HUD
             </h2>
             <p className="text-[#d1d5db] text-base leading-relaxed">
-              Press Win+G or your XBOX controller guide button to open the Game Bar overlay. Instantly access widgets to find new teammates with LFG, monitor applications and chat with friends across XBOX console, XBOX on PC and mobile—all without leaving your game.
+              Customizable in-game widget overlay designed to keep you in the zone with instant hardware telemetry, Discord audio balancing, and screen capture.
             </p>
           </div>
 
-          {/* Interactive 4 Tabs from Xbox on PC */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2 sm:gap-4 border-b border-[#222] pb-2 overflow-x-auto no-scrollbar">
+          {/* Interactive 4 Tabs */}
+          <div className="space-y-8">
+            <div className="flex flex-wrap items-center gap-3 border-b border-white/10 pb-4">
               {gameBarTabs.map((tab, idx) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveGameBarTab(idx)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-[2px] text-xs font-bold uppercase tracking-wider transition-all cursor-pointer shrink-0 ${activeGameBarTab === idx
-                      ? 'bg-[#107c10] text-white shadow-md'
-                      : 'bg-[#141a29] hover:bg-[#1a2336] text-[#ccc]'
-                    }`}
+                  className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all cursor-pointer ${
+                    activeGameBarTab === idx
+                      ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20'
+                      : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+                  }`}
                 >
                   {tab.icon}
                   <span>{tab.name}</span>
@@ -432,9 +453,9 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               ))}
             </div>
 
-            {/* Active Tab Preview Stage */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-lg bg-[#0e1320] border border-[#222] p-6 sm:p-8">
-              <div className="lg:col-span-8 rounded-lg overflow-hidden border border-[#222] shadow-2xl">
+            {/* Active Tab Showcase Stage */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0c101a] rounded-3xl p-6 sm:p-10 border border-white/10">
+              <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 bg-black shadow-2xl">
                 <img
                   src={gameBarTabs[activeGameBarTab].image}
                   alt={gameBarTabs[activeGameBarTab].name}
@@ -442,16 +463,21 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 />
               </div>
 
-              <div className="lg:col-span-4 space-y-4 text-left">
-                <span className="text-xs font-mono font-bold text-[#9bf00b] uppercase">
-                  WIDGET 0{activeGameBarTab + 1}
+              <div className="lg:col-span-5 space-y-4 text-left">
+                <span className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest">
+                  XPlay Widget 0{activeGameBarTab + 1}
                 </span>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
                   {gameBarTabs[activeGameBarTab].title}
                 </h3>
-                <p className="text-sm text-[#d1d5db] leading-relaxed">
+                <p className="text-[#d1d5db] text-sm sm:text-base leading-relaxed">
                   {gameBarTabs[activeGameBarTab].desc}
                 </p>
+                <div className="pt-2">
+                  <span className="text-xs font-mono text-[#888] block">
+                    Shortcut: Press <kbd className="bg-white/10 px-2 py-0.5 rounded text-white font-mono">Win + G</kbd> anytime
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -460,35 +486,46 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 7. SECTION 6: ROG XBOX ALLY X & ROG XBOX ALLY                  */}
+      {/* 7. SECTION 6: UNIVERSAL DEVICE COMPATIBILITY                    */}
       {/* ============================================================== */}
-      <section id="handheld" className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-[#222]">
+      <section className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-white/10">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-          <div className="lg:col-span-6 space-y-6 text-left">
+          
+          <div className="lg:col-span-5 space-y-6 text-left">
+            <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">
+              Multi-Device Ecosystem
+            </span>
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
-              ROG XBOX Ally X & ROG XBOX Ally
+              PLAY ON LAPTOP, <br />
+              <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
+                DESKTOP OR HANDHELD
+              </span>
             </h2>
 
             <p className="text-[#d1d5db] text-base leading-relaxed">
-              Experience seamless PC gaming on the go with the best of ROG and XBOX together in a gaming handheld. Plug in your XPlay Student Drive to access your pre-configured games anywhere without redownloading.
+              Carry your entire gaming sanctuary in your pocket. The XPlay Student Drive is smaller than a credit card and weighs just 48 grams. Plug into your hostel laptop, home PC, or handheld consoles like ASUS ROG Ally, Lenovo Legion Go, and MSI Claw.
+            </p>
+
+            <p className="text-sm text-[#9ca3af] leading-relaxed">
+              Seamlessly sync achievements, saved games, and cloud checkpoints across all your machines.
             </p>
 
             <div>
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="bg-[#107c10] hover:bg-[#0e6b0e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-[2px] transition-all cursor-pointer"
+                className="bg-white hover:bg-slate-200 text-slate-950 font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-all cursor-pointer shadow-md inline-flex items-center gap-2"
               >
-                MEET ROG XBOX ALLY
+                <span>PRE-ORDER NOW</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          <div className="lg:col-span-6">
-            <div className="rounded-lg overflow-hidden border border-[#222] shadow-2xl">
+          <div className="lg:col-span-7">
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
               <img
-                src="https://cms-assets.xboxservices.com/assets/70/24/70249dcb-482f-423b-823a-58caf066f4ee.jpg?n=Xbox-on-Handhelds_Page-Hero-0_UI-Update_1920x1080_02.jpg"
-                alt="Image of the boot up sequence on the ROG XBOX Ally X with South of Midnight characters in the background"
+                src="https://cms-assets.xboxservices.com/assets/f4/bf/f4bf70a0-043f-4e08-9df5-6e5a6ef67e3a.jpg?n=2438801_Feature-Merch-0_Handheld_1040x585.jpg"
+                alt="XPlay Console handheld and laptop gaming setup"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -498,93 +535,51 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 8. SECTION 7: PLAY WITH XBOX ANYWHERE                          */}
+      {/* 8. SECTION 7: CAMPUS & HOSTEL GAMING                           */}
       {/* ============================================================== */}
-      <section className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-[#222]">
+      <section className="py-24 px-6 sm:px-12 bg-[#050505] border-b border-white/10">
         <div className="max-w-[1400px] mx-auto space-y-12">
-
-          <div className="text-center max-w-3xl mx-auto space-y-4">
+          
+          <div className="max-w-2xl text-left space-y-3">
+            <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">
+              Gamer Mobility
+            </span>
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              PLAY WITH XBOX ANYWHERE
+              BUILT FOR CAMPUS LIFE
             </h2>
+            <p className="text-[#aaa] text-sm sm:text-base leading-relaxed">
+              Everything you need for spontaneous LAN tournaments, hostel chill sessions, and library gaming breaks.
+            </p>
           </div>
 
-          <div className="rounded-lg overflow-hidden border border-[#222] shadow-2xl mb-12">
-            <img
-              src="https://cms-assets.xboxservices.com/assets/f9/ca/f9caa507-88bd-4905-962e-17f295713522.jpg?n=Xbox-on-PC_Image-1084_XPA-ROG_767x431.jpg"
-              alt="A handheld gaming device, laptop, XBOX Series S, XBOX Series X, XBOX wireless controllers and a gaming PC"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-
-            <div className="p-6 rounded-lg bg-[#0e1320] border border-[#222] space-y-3">
-              <h3 className="text-xl font-bold text-white">Buy once, play anywhere</h3>
-              <p className="text-sm text-[#d1d5db] leading-relaxed">
-                Games that are XBOX Play Anywhere play on PC, XBOX console and supported gaming handhelds—at no additional cost.
-              </p>
-              <a href="https://www.xbox.com/games/browse?PlayWith=XboxPlayAnywhere" target="_blank" rel="noreferrer" className="inline-block text-[#9bf00b] hover:underline font-bold text-xs uppercase tracking-wider">
-                SHOP XBOX PLAY ANYWHERE GAMES &gt;
-              </a>
-            </div>
-
-            <div className="p-6 rounded-lg bg-[#0e1320] border border-[#222] space-y-3">
-              <h3 className="text-xl font-bold text-white">Stream hundreds of games</h3>
-              <p className="text-sm text-[#d1d5db] leading-relaxed">
-                Skip installing and stream most games with cloud gaming, including games you own (XBOX Game Pass subscription required to stream some cloud playable games).
-              </p>
-              <a href="https://www.xbox.com/cloud-gaming" target="_blank" rel="noreferrer" className="inline-block text-[#9bf00b] hover:underline font-bold text-xs uppercase tracking-wider">
-                EXPLORE CLOUD GAMING &gt;
-              </a>
-            </div>
-
-            <div className="p-6 rounded-lg bg-[#0e1320] border border-[#222] space-y-3">
-              <h3 className="text-xl font-bold text-white">Progress goes with you</h3>
-              <p className="text-sm text-[#d1d5db] leading-relaxed">
-                Pick up where you left off across devices and bring all saves, add-ons and achievements with you.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 9. SECTION 8: FREQUENTLY ASKED QUESTIONS (EXACT ACCORDION)     */}
-      {/* ============================================================== */}
-      <section id="faq" className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-[#222]">
-        <div className="max-w-4xl mx-auto space-y-8">
-
-          <div className="text-center space-y-3">
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-lg bg-[#070a10] border border-[#222] overflow-hidden"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            {[
+              {
+                title: 'Campus & Hostel Ready',
+                desc: 'Lightweight anodized CNC enclosure fits directly into your pencil pouch or backpack pocket. Plug in and play in 10 seconds flat.'
+              },
+              {
+                title: 'Bring Your Own Gamepad',
+                desc: 'Full plug-and-play support for Xbox Series X|S, PS5 DualSense, DualShock 4, Nintendo Switch Pro, or keyboard and mouse.'
+              },
+              {
+                title: 'Lifetime Firmware Updates',
+                desc: 'Free over-the-air firmware optimizations and DirectStorage patches delivered directly via the XPlay Control Center.'
+              }
+            ].map((card, i) => (
+              <div 
+                key={i} 
+                className="p-8 rounded-3xl bg-[#0c101a] border border-white/10 hover:border-cyan-500/40 transition-all space-y-3 group"
               >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white hover:text-[#9bf00b] transition-colors cursor-pointer"
-                >
-                  <span>{faq.q}</span>
-                  {openFaq === index ? (
-                    <Minus className="w-5 h-5 text-[#107c10] shrink-0" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-[#107c10] shrink-0" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-5 sm:px-6 pb-6 text-sm text-[#d1d5db] leading-relaxed border-t border-[#181818] pt-4">
-                    {faq.a}
-                  </div>
-                )}
+                <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono font-bold">
+                  0{i + 1}
+                </div>
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-[#9ca3af] leading-relaxed">
+                  {card.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -593,82 +588,78 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 10. OFFICIAL MICROSOFT & XBOX FOOTER                           */}
+      {/* 9. SECTION 8: FREQUENTLY ASKED QUESTIONS (#faqs)               */}
       {/* ============================================================== */}
-      <footer className="w-full bg-[#050505] text-[#888] text-xs py-14 px-6 sm:px-12 border-t border-[#222] select-none">
-        <div className="max-w-[1400px] mx-auto space-y-10">
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Browse</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><a href="#hero" className="hover:text-white transition-colors">Xbox on PC</a></li>
-                <li><a href="#better-together" className="hover:text-white transition-colors">PC Game Pass</a></li>
-                <li><a href="#game-bar" className="hover:text-white transition-colors">Xbox Game Bar</a></li>
-                <li><a href="#handheld" className="hover:text-white transition-colors">Handheld PC</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Hardware</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><span className="text-white">Student Edition (250GB)</span></li>
-                <li><Link to="/consoles" className="hover:text-white transition-colors">Standard Edition (500GB)</Link></li>
-                <li><Link to="/consoles" className="hover:text-white transition-colors">Pro Edition (500GB)</Link></li>
-                <li><Link to="/consoles" className="hover:text-white transition-colors">Ultimate Edition (1TB)</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Microsoft Store</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><span className="hover:text-white transition-colors">Account profile</span></li>
-                <li><span className="hover:text-white transition-colors">Download Center</span></li>
-                <li><span className="hover:text-white transition-colors">Order tracking</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Education</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><span className="hover:text-white transition-colors">Microsoft in education</span></li>
-                <li><span className="hover:text-white transition-colors">Devices for education</span></li>
-                <li><span className="hover:text-white transition-colors">Student discounts</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Developer</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><span className="hover:text-white transition-colors">Microsoft Visual Studio</span></li>
-                <li><span className="hover:text-white transition-colors">Windows App SDK</span></li>
-                <li><span className="hover:text-white transition-colors">DirectX 12 Agility</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-bold text-white uppercase tracking-wider mb-3">Company</h5>
-              <ul className="space-y-2 text-[#888]">
-                <li><span className="hover:text-white transition-colors">Careers</span></li>
-                <li><span className="hover:text-white transition-colors">About Microsoft</span></li>
-                <li><span className="hover:text-white transition-colors">Privacy at Microsoft</span></li>
-              </ul>
-            </div>
+      <section id="faqs" className="py-24 px-6 sm:px-12 bg-[#0c101a] border-b border-white/10">
+        <div className="max-w-[1000px] mx-auto space-y-12">
+          
+          <div className="text-center space-y-3">
+            <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">
+              Clear Answers
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-[#aaa] text-sm sm:text-base max-w-xl mx-auto">
+              Everything you need to know about XPlay Student Edition hardware, compatibility, and game licensing.
+            </p>
           </div>
 
-          <div className="pt-8 border-t border-[#181818] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#666]">
-            <div className="flex items-center gap-4">
-              <span>English (India)</span>
-              <span>Your Privacy Choices</span>
-              <span>Consumer Health Privacy</span>
-            </div>
+          <div className="space-y-3 text-left">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index}
+                className="border border-white/10 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] transition-all overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                >
+                  <span className="font-bold text-base sm:text-lg text-white">
+                    {faq.q}
+                  </span>
+                  <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-white">
+                    {openFaq === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  </span>
+                </button>
+
+                {openFaq === index && (
+                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#ccc] leading-relaxed border-t border-white/5">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Pre-order banner at bottom of FAQ */}
+          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-sky-950/80 via-slate-900 to-cyan-950/80 border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div>
-              <span>© Microsoft 2026. XPlay Hardware Architecture. All rights reserved.</span>
+              <span className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block mb-1">
+                LIMITED INTRODUCTORY BATCH
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black text-white">
+                Reserve Your Student Edition for ₹6,999
+              </h3>
+              <p className="text-sm text-slate-300 mt-1">
+                Includes 250GB DirectStorage SSD + 1x AAA Digital Game Voucher
+              </p>
             </div>
+            <button
+              onClick={() => onOpenPreOrder?.('student')}
+              className="bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all cursor-pointer shadow-lg shadow-cyan-500/20 shrink-0 active:scale-95"
+            >
+              PRE-ORDER NOW
+            </button>
           </div>
 
         </div>
-      </footer>
+      </section>
+
+      {/* ============================================================== */}
+      {/* 10. OFFICIAL XPLAY GAMING FOOTER                               */}
+      {/* ============================================================== */}
+      <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
     </div>
   );
