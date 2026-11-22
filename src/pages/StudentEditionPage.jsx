@@ -22,28 +22,28 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       name: 'Performance',
       title: 'Performance',
       desc: 'Balance system resources to maximize performance. Toggle HDR on or off and monitor frame rates, GPU clock speed, and RAM allocation in real time.',
-      image: 'https://cms-assets.xboxservices.com/assets/56/80/568020e1-a8ac-41f7-8b26-bcebe063bc22.jpg?n=2438801_Hero-multi-feature-1084_Performance_1399x933.jpg'
+      image: '/assets/xbox_pc/hud_performance.jpg'
     },
     {
       id: 'audio',
       name: 'Audio',
       title: 'Audio Mixer',
       desc: 'Balance in-game sound effects, Discord voice chat, and background music without alt-tabbing or leaving your match.',
-      image: 'https://cms-assets.xboxservices.com/assets/19/2e/192e6c5b-e3dc-414a-b9ce-caebca329758.jpg?n=2438801_Hero-multi-feature-1084_Audio_1399x933.jpg'
+      image: '/assets/xbox_pc/hud_audio.jpg'
     },
     {
       id: 'capture',
       name: 'Capture',
       title: 'Screen Capture & Replay',
       desc: 'Record your best clutch kills and high-speed maneuvers in crisp 1080p 60 FPS directly saved onto your XPlay drive.',
-      image: 'https://cms-assets.xboxservices.com/assets/d5/e9/d5e9a710-5027-4bea-9369-85b6dac2f5fd.jpg?n=2438801_Hero-multi-feature-1084_Capture_1399x933.jpg'
+      image: '/assets/xbox_pc/hud_capture.jpg'
     },
     {
       id: 'widgets',
       name: 'Widgets',
       title: 'Custom Widgets & RAM Boost',
       desc: 'Instantly access widgets to find new teammates with LFG, monitor system applications, and chat with friends across PC and mobile.',
-      image: 'https://cms-assets.xboxservices.com/assets/98/f0/98f0716d-cd3e-4111-a760-81bec3e7f9b7.jpg?n=2438801_Hero-multi-feature-1084_Widgets_1399x933.jpg'
+      image: '/assets/xbox_pc/hud_widgets.jpg'
     }
   ];
 
@@ -128,7 +128,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             loop
             muted
             playsInline
-            poster="https://cms-assets.xboxservices.com/assets/58/61/58613255-f4d2-4bf9-9217-62a3893ed2d8.jpg?n=2438801_Super-Hero-1084_Poster_1920x1080_03.jpg"
+            poster="/assets/xbox_pc/hero_poster.jpg"
             className="w-full h-full object-cover object-center"
             src="https://cms-assets.xboxservices.com/assets/d8/2f/d82f2cf2-4d36-426e-ac14-9a89340d1fb3.mp4?n=2438801_Super-Hero-1084_1920x1080_02.mp4"
           />
@@ -201,7 +201,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             loop
             muted
             playsInline
-            poster="https://cms-assets.xboxservices.com/assets/da/3e/da3e2b2a-70e6-4026-a5fe-991aa417cab2.jpg?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.jpg"
+            poster="/assets/xbox_pc/library_poster.jpg"
             className="absolute inset-0 w-full h-full object-cover"
             src="https://cms-assets.xboxservices.com/assets/6d/e2/6de24801-8ced-44c8-bda9-4cfb1d8a2d58.mp4?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.mp4"
           />
@@ -249,7 +249,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             <div className="lg:col-span-7">
               <div className="overflow-hidden">
                 <img
-                  src="https://cms-assets.xboxservices.com/assets/30/db/30db423c-1fc1-4552-aa76-76b7d534239d.png?n=Xbox-On-PC_Xbox-Mode_Hero-1084_1920x720_01.png"
+                  src="/assets/xbox_pc/setup_mode.png"
                   alt="XPlay mode on, work mode off setup"
                   className="w-full h-auto object-cover"
                 />
@@ -334,7 +334,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         {/* 100% Full Bleed Edge-To-Edge Image with Hotspots */}
         <div className="relative w-full overflow-hidden bg-black">
           <img
-            src="https://cms-assets.xboxservices.com/assets/a4/bd/a4bd7896-2fd6-4f31-bd98-4c3a964cecf6.jpg?n=2438801_Image-1084_Made-for-PC_3840x1890_03.jpg"
+            src="/assets/xbox_pc/made_for_pc.jpg"
             alt="Made For PC Setup"
             className="w-full h-auto object-cover"
           />
@@ -371,7 +371,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         id="game-hud" 
         className="w-full min-h-[750px] py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5 relative flex items-center"
         style={{
-          backgroundImage: `url('https://cms-assets.xboxservices.com/assets/48/6a/486ac4a6-3d1d-4caf-aa97-a125cf4d9d36.jpg?n=2438801_Hero-multi-feature-1400_performance_3840x2160.jpg')`,
+          backgroundImage: `url('/assets/xbox_pc/hud_bg.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -455,7 +455,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             loop
             muted
             playsInline
-            poster="https://cms-assets.xboxservices.com/assets/f5/9c/f59c8397-1724-4362-9b8c-0c8433a67628.jpg?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.jpg"
+            poster="/assets/xbox_pc/rog_ally_poster.jpg"
             className="w-full h-auto object-cover"
             src="https://cms-assets.xboxservices.com/assets/d7/8c/d78c75f7-06fb-4693-8ee5-29d9196181c9.mp4?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.mp4"
           />
@@ -476,7 +476,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         {/* 100% Full Bleed Edge-To-Edge Image */}
         <div className="w-full overflow-hidden bg-black">
           <img
-            src="https://cms-assets.xboxservices.com/assets/bd/f0/bdf0c90e-42b5-493d-bc20-15ce6f3b3259.jpg?n=Xbox-on-PC_Image-1084_XPA-ROG_1920x720.jpg"
+            src="/assets/xbox_pc/play_anywhere.jpg"
             alt="Play with XPlay anywhere hardware ecosystem"
             className="w-full h-auto object-cover"
           />
