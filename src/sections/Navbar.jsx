@@ -177,28 +177,28 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
           )}
         </div>
 
-        <Link to="/#about" className="hover:text-yellow transition-colors hidden md:inline-block">
-          Hardware
-        </Link>
-
-        <Link to="/#consoles" className="hover:text-yellow transition-colors hidden md:inline-block">
-          Editions
-        </Link>
-
-        <Link to="/#games" className="hover:text-yellow transition-colors hidden sm:inline-block">
+        <Link to="/games" className="hover:text-cyan-300 transition-colors hidden sm:inline-block">
           Games
         </Link>
 
+        <Link to="/about" className="hover:text-cyan-300 transition-colors hidden md:inline-block">
+          About
+        </Link>
+
+        <Link to="/support" className="hover:text-cyan-300 transition-colors hidden md:inline-block">
+          Support
+        </Link>
+
         <button
-          onClick={() => onOpenPreOrder?.('pro')}
-          className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-sky-500/20 cursor-pointer"
+          onClick={() => onOpenPreOrder?.('student')}
+          className="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-[#00e5ff] hover:bg-[#00c8e6] text-slate-950 font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#00e5ff]/25 cursor-pointer hover:scale-105 active:scale-95"
         >
           Pre-Order
         </button>
 
         <button
           onClick={() => onOpenLogin?.()}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300 font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-md cursor-pointer ml-1"
+          className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 hover:border-cyan-400 text-white hover:text-cyan-300 font-sans font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all shadow-md cursor-pointer ml-1"
           aria-label="Login"
         >
           <LogIn className="w-3.5 h-3.5 text-cyan-400" />
