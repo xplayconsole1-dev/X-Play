@@ -183,60 +183,6 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         </div>
       </section>
 
-      {/* ============================================================== */}
-      {/* 2. SECTION 2: ELEVATE YOUR PC GAMING EXPERIENCE WITH XPLAY     */}
-      {/* ============================================================== */}
-      <section className="w-full bg-[#111111] text-center select-none pt-24 pb-0">
-        <div className="max-w-[1400px] mx-auto px-6 mb-16">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
-            Elevate your PC gaming <br />
-            experience with XPLAY
-          </h2>
-        </div>
-
-        {/* 100% Full Bleed Edge-To-Edge Video Banner */}
-        <div className="relative w-full h-[580px] sm:h-[700px] flex items-end overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/assets/xbox_pc/library_poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://cms-assets.xboxservices.com/assets/6d/e2/6de24801-8ced-44c8-bda9-4cfb1d8a2d58.mp4?n=Xbox-on-PC_Instant-Library-PC_1084_1920x1080_01.mp4"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent hidden sm:block w-3/4" />
-
-          {/* Content Overlay */}
-          <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pb-16 text-left">
-            <div className="max-w-xl space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#9bf00b]">
-                <HardDrive className="w-4 h-4 text-[#9bf00b]" />
-                <span>XPLAY DIRECTSTORAGE VAULT</span>
-              </div>
-
-              <h3 className="text-3xl sm:text-5xl font-black text-white font-round-bold leading-tight uppercase">
-                Get an instant library on PC
-              </h3>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                XPlay unlocks immediate access to high-quality games and more. Install and play new games on day one and enjoy in-game benefits for the biggest games. Want to own the games you love? Enjoy permanent ownership on Steam, Epic, and Rockstar with zero host storage wear.
-              </p>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => onOpenPreOrder?.('student')}
-                  className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
-                >
-                  <span>EXPLORE GAMES</span>
-                  <ChevronRight className="w-4 h-4 stroke-[3]" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================================================== */}
       {/* 3. SECTION 3: XPLAY MODE ON, WORK MODE OFF                     */}
