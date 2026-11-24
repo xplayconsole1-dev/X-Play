@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { 
-  Check, 
-  ChevronDown, 
-  ArrowRight, 
-  ShieldCheck, 
-  Zap, 
-  Cpu, 
-  HardDrive, 
-  Gamepad2, 
-  KeyRound, 
-  Sparkles, 
   ChevronRight,
+  HardDrive,
   Package
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -78,40 +69,21 @@ const EditionPage = ({ editionId: propEditionId, onOpenPreOrder }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30" />
         </div>
 
-        {/* Content Container */}
-        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-20 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-7 text-left space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-[#00e5ff] text-xs font-mono font-bold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-[#00e5ff]" />
-              <span>{edition.tagline}</span>
-            </div>
+        {/* Content Container (Left-aligned, clean official layout) */}
+        <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pt-24 pb-20">
+          <div className="max-w-2xl space-y-6 text-left">
 
+            {/* H1 Heading */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none font-round-bold drop-shadow-md">
-              {edition.title}
+              XPLAY ON PC
             </h1>
 
-            <p className="text-[#e5e7eb] text-base sm:text-lg font-normal max-w-xl leading-relaxed drop-shadow-sm">
-              {edition.summary}
+            {/* Subheading / Description */}
+            <p className="text-[#e5e7eb] text-base sm:text-lg font-normal leading-relaxed drop-shadow-sm">
+              Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC. Whether you're playing on a high-end rig, budget-friendly laptop, or anything in between, and whether you prefer a mouse and keyboard or an XPlay controller, we've got you covered.
             </p>
 
-            {/* Key Telemetry Badges */}
-            <div className="grid grid-cols-3 gap-3 max-w-lg pt-2">
-              <div className="p-3.5 rounded-xl bg-black/50 border border-white/15 backdrop-blur-sm text-left">
-                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">Storage</div>
-                <div className="text-xl font-black text-white font-mono mt-0.5">{edition.capacityNum}</div>
-              </div>
-              <div className="p-3.5 rounded-xl bg-black/50 border border-white/15 backdrop-blur-sm text-left">
-                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">Speed</div>
-                <div className="text-xl font-black text-[#00e5ff] font-mono mt-0.5">1,050 MB/s</div>
-              </div>
-              <div className="p-3.5 rounded-xl bg-black/50 border border-white/15 backdrop-blur-sm text-left">
-                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">Isolation</div>
-                <div className="text-xl font-black text-emerald-400 font-mono mt-0.5">SAN Policy 4</div>
-              </div>
-            </div>
-
-            {/* CTAs */}
+            {/* Call To Action Button (Ice Blue with Chevron) */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenPreOrder?.(edition.id)}
@@ -122,42 +94,24 @@ const EditionPage = ({ editionId: propEditionId, onOpenPreOrder }) => {
               </button>
 
               <span className="text-xs text-[#00e5ff] font-mono font-bold px-3 py-1 rounded bg-black/40 border border-[#00e5ff]/30 backdrop-blur-sm">
-                Save ₹1,000 Today (MSRP {edition.price})
+                {edition.title}: {edition.storage} ({edition.launchPrice})
               </span>
             </div>
 
-            <p className="text-xs text-[#9ca3af] leading-relaxed pt-1">
-              Requires Windows 10/11 version 22H2 or higher. 1-Year Comprehensive Replacement Warranty included.
+            {/* Legal / Hardware Specs Copy */}
+            <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
+              Requires Windows 10/11 version 22H2 or higher.{' '}
+              <a href="#faq" className="text-white underline hover:text-[#00e5ff] transition-colors">
+                See system requirements.
+              </a>
+              <br className="hidden sm:inline" />
+              {' '}Having trouble setting up or choosing edition?{' '}
+              <a href="#faq" className="text-white underline hover:text-[#00e5ff] transition-colors">
+                Get help here.
+              </a>
             </p>
+
           </div>
-
-          {/* Right Column: Commercial Hardware & Packaging Showcase */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="relative w-full aspect-[4/3] max-w-lg rounded-3xl p-5 bg-white border border-slate-200 shadow-2xl flex flex-col justify-between overflow-hidden group">
-              <div className="absolute top-4 right-4 z-20">
-                <span className="px-3.5 py-1 rounded-full bg-slate-900 border border-slate-700 text-[#00e5ff] text-[11px] font-bold uppercase tracking-widest font-mono shadow-md">
-                  {edition.capacityNum} NVMe
-                </span>
-              </div>
-
-              <div className="w-full flex-1 flex items-center justify-center relative overflow-hidden rounded-2xl bg-white">
-                <img
-                  src={`/editions/xplay_${edition.id}_edition.jpg`}
-                  alt={`${edition.title} Commercial Hardware & Packaging`}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                  onError={(e) => {
-                    e.target.src = '/brand/01_product_drive.jpg';
-                  }}
-                />
-              </div>
-
-              <div className="pt-3 px-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600 font-sans">
-                <span className="font-semibold">{edition.chassis}</span>
-                <span className="text-sky-600 font-mono font-bold">1,050 MB/s DirectStorage</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -379,39 +333,7 @@ const EditionPage = ({ editionId: propEditionId, onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 8. EDITION SWITCHER                                            */}
-      {/* ============================================================== */}
-      <section className="py-16 px-6 sm:px-12 md:px-16 bg-white select-none border-b border-slate-200/80">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-left">
-            <h4 className="text-xl font-black uppercase text-slate-900 font-round-bold">Explore Other Editions</h4>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">Compare features across Student, Standard, Pro, and Ultimate</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            {Object.keys(EDITIONS_DATA).map((key) => {
-              const ed = EDITIONS_DATA[key];
-              const isCurrent = key === edition.id;
-              const linkPath = key === 'student' ? '/consoles/student' : `/consoles/${key}`;
-              return (
-                <Link
-                  key={key}
-                  to={linkPath}
-                  className={`px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition-all ${
-                    isCurrent
-                      ? 'bg-slate-900 text-white shadow-md'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200'
-                  }`}
-                >
-                  {ed.title} • {ed.launchPrice}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 9. OFFICIAL GAMING FOOTER                                      */}
+      {/* 8. OFFICIAL GAMING FOOTER                                      */}
       {/* ============================================================== */}
       <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 

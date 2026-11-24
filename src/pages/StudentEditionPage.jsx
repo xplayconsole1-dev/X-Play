@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   ChevronRight, 
   HardDrive,
-  Package,
-  Sparkles
+  Package
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import { EDITIONS_DATA } from '../constants/editionsData';
 import GamingFooter from '../sections/GamingFooter';
 
 const StudentEditionPage = ({ onOpenPreOrder }) => {
@@ -342,39 +339,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. EDITION SWITCHER                                            */}
-      {/* ============================================================== */}
-      <section className="py-16 px-6 sm:px-12 md:px-16 bg-white select-none border-b border-slate-200/80">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-left">
-            <h4 className="text-xl font-black uppercase text-slate-900 font-round-bold">Explore Other Editions</h4>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">Compare features across Student, Standard, Pro, and Ultimate</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            {Object.keys(EDITIONS_DATA).map((key) => {
-              const ed = EDITIONS_DATA[key];
-              const isCurrent = key === 'student';
-              const linkPath = key === 'student' ? '/consoles/student' : `/consoles/${key}`;
-              return (
-                <Link
-                  key={key}
-                  to={linkPath}
-                  className={`px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition-all ${
-                    isCurrent
-                      ? 'bg-slate-900 text-white shadow-md'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200'
-                  }`}
-                >
-                  {ed.title} • {ed.launchPrice}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 7. OFFICIAL XPLAY GAMING FOOTER                                */}
+      {/* 6. OFFICIAL XPLAY GAMING FOOTER                                */}
       {/* ============================================================== */}
       <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
