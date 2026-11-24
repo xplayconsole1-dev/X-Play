@@ -23,7 +23,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import ConsolesPage from './pages/ConsolesPage';
 import EditionPage from './pages/EditionPage';
 import StudentEditionPage from './pages/StudentEditionPage';
-import GamesPage from './pages/GamesPage';
 import AboutPage from './pages/AboutPage';
 import CommunityPage from './pages/CommunityPage';
 import SupportPage from './pages/SupportPage';
@@ -112,7 +111,6 @@ const App = () => {
           <Route path="/consoles" element={<ConsolesPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/consoles/student" element={<StudentEditionPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/consoles/:editionId" element={<EditionPage onOpenPreOrder={handleOpenPreOrder} />} />
-          <Route path="/games" element={<GamesPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/about" element={<AboutPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/community" element={<CommunityPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/news" element={<NewsPage onOpenPreOrder={handleOpenPreOrder} />} />

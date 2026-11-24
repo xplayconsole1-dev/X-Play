@@ -96,9 +96,9 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
         >
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="flex items-center gap-1.5 hover:text-cyan-300 transition-colors cursor-pointer py-2"
+            className="flex items-center gap-1.5 font-round-bold text-white text-xs sm:text-sm uppercase tracking-widest font-bold hover:text-cyan-300 transition-colors cursor-pointer py-2"
           >
-            <span>Consoles</span>
+            <span className="font-round-bold text-xs sm:text-sm uppercase tracking-widest">Consoles</span>
             <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-cyan-400' : 'text-white/70'}`} />
           </button>
 
