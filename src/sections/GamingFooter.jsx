@@ -166,14 +166,14 @@ const GamingFooter = ({ onOpenPreOrder }) => {
                 <Link to="/about" className="hover:text-sky-600 transition-colors">
                   About XPlay
                 </Link>
+                <Link to="/news" className="hover:text-sky-600 transition-colors">
+                  Newsroom & Press
+                </Link>
                 <Link to="/support" className="hover:text-sky-600 transition-colors">
                   Support & Helpdesk
                 </Link>
                 <Link to="/support" className="hover:text-sky-600 transition-colors">
                   1-Yr Doorstep Warranty
-                </Link>
-                <Link to="/community" className="hover:text-sky-600 transition-colors">
-                  Community Hub
                 </Link>
               </div>
             </div>
@@ -235,6 +235,9 @@ const GamingFooter = ({ onOpenPreOrder }) => {
             </Link>
             <Link to="/community" className="hover:text-sky-600 transition-colors">
               Community
+            </Link>
+            <Link to="/news" className="hover:text-sky-600 transition-colors">
+              News
             </Link>
             <Link to="/about" className="hover:text-sky-600 transition-colors">
               About

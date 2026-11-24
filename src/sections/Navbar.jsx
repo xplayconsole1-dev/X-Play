@@ -11,6 +11,7 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   const isLightTop = location.pathname === '/consoles' || 
                      location.pathname === '/about' || 
                      location.pathname === '/support' || 
+                     location.pathname === '/news' || 
                      location.pathname === '/community';
 
   useEffect(() => {
@@ -179,6 +180,10 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
 
         <Link to="/community" className="hover:text-cyan-300 transition-colors hidden sm:inline-block">
           Community
+        </Link>
+
+        <Link to="/news" className="hover:text-cyan-300 transition-colors hidden sm:inline-block">
+          News
         </Link>
 
         <Link to="/about" className="hover:text-cyan-300 transition-colors hidden md:inline-block">

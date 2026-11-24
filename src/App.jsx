@@ -27,6 +27,7 @@ import GamesPage from './pages/GamesPage';
 import AboutPage from './pages/AboutPage';
 import CommunityPage from './pages/CommunityPage';
 import SupportPage from './pages/SupportPage';
+import NewsPage from './pages/NewsPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,6 +115,7 @@ const App = () => {
           <Route path="/games" element={<GamesPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/about" element={<AboutPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/community" element={<CommunityPage onOpenPreOrder={handleOpenPreOrder} />} />
+          <Route path="/news" element={<NewsPage onOpenPreOrder={handleOpenPreOrder} />} />
           <Route path="/support" element={<SupportPage onOpenPreOrder={handleOpenPreOrder} />} />
         </Routes>
       </ErrorBoundary>
