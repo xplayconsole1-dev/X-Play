@@ -37,7 +37,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#111111] text-[#f5f5f5] font-sans antialiased selection:bg-[#00e5ff] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans antialiased selection:bg-[#00e5ff] selection:text-black overflow-x-hidden">
       <SEO
         title="XPlay on PC | Student Edition (250GB DirectStorage Gaming Drive)"
         description="Transform any college laptop or budget PC into a 60 FPS gaming powerhouse. Includes 250GB fast SSD and 1x full AAA game key for ₹6,999."
@@ -99,7 +99,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             {/* Legal / Hardware Specs Copy */}
             <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
               Requires Windows 10/11 version 22H2 or higher.{' '}
-              <a href="#specs" className="text-white underline hover:text-[#00e5ff] transition-colors">
+              <a href="#faqs" className="text-white underline hover:text-[#00e5ff] transition-colors">
                 See system requirements.
               </a>
               <br className="hidden sm:inline" />
@@ -116,9 +116,9 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 2. SECTION 2: ELEVATE YOUR PC GAMING EXPERIENCE WITH XPLAY     */}
       {/* ============================================================== */}
-      <section className="w-full bg-[#111111] text-center select-none pt-24 pb-0">
+      <section className="w-full bg-white text-center select-none pt-24 pb-0 border-b border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 mb-16">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-slate-900 font-round-bold leading-tight">
             Elevate your PC gaming <br />
             experience with XPLAY
           </h2>
@@ -146,7 +146,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 Get an instant library on PC
               </h3>
 
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
                 XPlay unlocks immediate access to high-quality games and more. Install and play new games on day one and enjoy in-game benefits for the biggest games. Want to own the games you love? Enjoy permanent ownership on Steam, Epic, and Rockstar with zero host storage wear.
               </p>
 
@@ -164,20 +164,19 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
         </div>
       </section>
 
-
       {/* ============================================================== */}
       {/* 3. SECTION 3: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
       {/* ============================================================== */}
-      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
+      <section className="w-full bg-[#f8fafc] text-center select-none pt-24 pb-16 border-b border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 mb-14">
-          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 font-round-bold leading-tight">
             PLAY WITH XPLAY ANYWHERE
           </h2>
-          <div className="w-16 h-1 bg-[#00e5ff] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00e5ff] mx-auto mt-4 rounded-full" />
         </div>
 
         {/* 100% Full Bleed Edge-To-Edge Image */}
-        <div className="w-full overflow-hidden bg-black">
+        <div className="w-full overflow-hidden bg-black shadow-lg">
           <img
             src="/assets/xbox_pc/play_anywhere.jpg"
             alt="Play with XPlay anywhere hardware ecosystem"
@@ -189,46 +188,46 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 4. SECTION 4: 3-COLUMN FEATURE PILLARS                         */}
       {/* ============================================================== */}
-      <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
+      <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-white select-none border-b border-slate-200/80">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
           
           <div className="space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold uppercase leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-round-bold uppercase leading-tight">
               Buy once, play anywhere
             </h3>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               Games that are XPlay Anywhere play on PC, laptop, and supported gaming handhelds—at no additional cost.
             </p>
             <a 
-              href="#specs" 
-              className="text-[#00e5ff] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
+              href="#faqs" 
+              className="text-sky-600 hover:text-sky-700 hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
             >
               <span>SHOP XPLAY ANYWHERE GAMES</span>
-              <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
+              <ChevronRight className="w-3.5 h-3.5 stroke-[3] text-sky-600" />
             </a>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold uppercase leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-round-bold uppercase leading-tight">
               Stream hundreds of games
             </h3>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               Skip installing and stream most games with cloud gaming, including games you own. No high-end laptop GPU required.
             </p>
             <a 
-              href="#specs" 
-              className="text-[#00e5ff] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
+              href="#faqs" 
+              className="text-sky-600 hover:text-sky-700 hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
             >
               <span>EXPLORE DIRECTSTORAGE</span>
-              <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
+              <ChevronRight className="w-3.5 h-3.5 stroke-[3] text-sky-600" />
             </a>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold uppercase leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-round-bold uppercase leading-tight">
               Progress goes with you
             </h3>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               Pick up where you left off across devices and bring all saves, add-ons, and achievements with you seamlessly.
             </p>
           </div>
@@ -239,30 +238,30 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 5. SECTION 5: FREQUENTLY ASKED QUESTIONS                       */}
       {/* ============================================================== */}
-      <section id="faqs" className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
+      <section id="faqs" className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#f8fafc] select-none border-b border-slate-200/80">
         <div className="max-w-[1200px] mx-auto space-y-12">
           
           <div className="text-left space-y-2">
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 font-round-bold">
               Frequently Asked Questions
             </h2>
           </div>
 
-          <div className="divide-y divide-white/10 border-y border-white/10 text-left">
+          <div className="divide-y divide-slate-200 border-y border-slate-200 text-left">
             {faqs.map((faq, index) => (
               <div key={index} className="py-6">
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none group"
                 >
-                  <span className="font-bold text-base sm:text-lg text-white group-hover:text-[#00e5ff] transition-colors flex items-center gap-3">
-                    <ChevronRight className={`w-4 h-4 text-[#00e5ff] transition-transform duration-200 ${openFaq === index ? 'rotate-90' : ''}`} />
+                  <span className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-sky-600 transition-colors flex items-center gap-3">
+                    <ChevronRight className={`w-4 h-4 text-sky-600 transition-transform duration-200 ${openFaq === index ? 'rotate-90' : ''}`} />
                     <span>{faq.q}</span>
                   </span>
                 </button>
 
                 {openFaq === index && (
-                  <div className="pt-4 pl-7 text-sm sm:text-base text-slate-300 leading-relaxed">
+                  <div className="pt-4 pl-7 text-sm sm:text-base text-slate-600 leading-relaxed">
                     {faq.a}
                   </div>
                 )}
@@ -271,24 +270,24 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           </div>
 
           {/* Full Width Reservation Banner */}
-          <div className="p-8 sm:p-12 rounded-xl bg-black border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-2xl">
+          <div className="p-8 sm:p-12 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-xl">
             <div>
-              <span className="text-xs font-mono font-bold text-[#00e5ff] uppercase tracking-widest block mb-1">
+              <span className="text-xs font-mono font-bold text-sky-600 uppercase tracking-widest block mb-1">
                 LIMITED INTRODUCTORY BATCH
               </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-round-bold">
                 Reserve Your Student Edition for ₹6,999
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">
                 Includes 250GB DirectStorage SSD + 1x AAA Digital Game Voucher
               </p>
             </div>
             <button
               onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 shrink-0 inline-flex items-center gap-2"
+              className="bg-slate-900 hover:bg-[#00e5ff] hover:text-slate-950 active:scale-95 text-white font-black text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-md shrink-0 inline-flex items-center gap-2"
             >
               <span>PRE-ORDER NOW</span>
-              <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
+              <ChevronRight className="w-4 h-4 stroke-[3]" />
             </button>
           </div>
 
