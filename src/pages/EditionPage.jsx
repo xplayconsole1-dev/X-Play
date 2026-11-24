@@ -57,52 +57,11 @@ const EditionPage = ({ editionId: propEditionId, onOpenPreOrder }) => {
       />
 
       {/* ============================================================== */}
-      {/* 1. STICKY SUB-NAV & BUY BAR                                    */}
-      {/* ============================================================== */}
-      <div className="sticky top-16 left-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200 px-4 sm:px-8 py-3 flex items-center justify-between text-xs transition-all shadow-sm">
-        <div className="flex items-center gap-3 sm:gap-6 overflow-x-auto no-scrollbar">
-          <Link to="/" className="text-slate-500 hover:text-slate-900 font-bold transition-colors shrink-0">
-            XPlay
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="text-sky-600 font-extrabold uppercase tracking-wider shrink-0">
-            {edition.title}
-          </span>
-          
-          <div className="hidden lg:flex items-center gap-5 ml-4 text-slate-600 font-semibold">
-            <a href="#overview" className="hover:text-sky-600 transition-colors">Overview</a>
-            <a href="#instant-library" className="hover:text-sky-600 transition-colors">Digital Library</a>
-            <a href="#play-anywhere" className="hover:text-sky-600 transition-colors">Play Anywhere</a>
-            <a href="#in-the-box" className="hover:text-sky-600 transition-colors">In The Box</a>
-            <a href="#faq" className="hover:text-sky-600 transition-colors">FAQ</a>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3 shrink-0">
-          <div className="text-right hidden sm:block">
-            <span className="text-base font-black text-slate-900 font-mono leading-none block">
-              {edition.price}
-            </span>
-            <span className="text-[10px] text-emerald-600 font-bold block">
-              Launch: {edition.launchPrice}
-            </span>
-          </div>
-
-          <button
-            onClick={() => onOpenPreOrder?.(edition.id)}
-            className="px-4 sm:px-6 py-2 rounded-[2px] bg-[#00e5ff] hover:bg-[#00c8e6] text-slate-950 font-black uppercase tracking-wider text-xs shadow-md shadow-[#00e5ff]/20 transition-all cursor-pointer hover:scale-105 active:scale-95"
-          >
-            Pre-Order Now
-          </button>
-        </div>
-      </div>
-
-      {/* ============================================================== */}
-      {/* 2. CINEMATIC VIDEO HERO SECTION                                */}
+      {/* 1. CINEMATIC VIDEO HERO SECTION                                */}
       {/* ============================================================== */}
       <section 
         id="overview" 
-        className="relative w-full min-h-[92vh] flex items-center overflow-hidden bg-black select-none"
+        className="relative w-full h-screen min-h-screen flex items-center overflow-hidden bg-black select-none"
       >
         {/* Full-bleed Ambient Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">

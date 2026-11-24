@@ -1,11 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Sparkles, LogIn, ArrowRight } from 'lucide-react';
 
 const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
+  const location = useLocation();
+
+  const isLightTop = location.pathname === '/consoles' || 
+                     location.pathname === '/about' || 
+                     location.pathname === '/support' || 
+                     location.pathname === '/community';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +70,7 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full flex justify-between items-center transition-all duration-300 z-[100] select-none ${
-      scrolled 
+      (scrolled || isLightTop)
         ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/10 md:px-16 md:py-4 p-4 shadow-xl' 
         : 'md:px-16 md:py-8 p-5 bg-transparent'
     }`}>
