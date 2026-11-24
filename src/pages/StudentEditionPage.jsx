@@ -1,55 +1,17 @@
 import React, { useState } from 'react';
 import { 
   ChevronRight, 
-  HardDrive,
-  Plus
+  HardDrive
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import GamingFooter from '../sections/GamingFooter';
 
 const StudentEditionPage = ({ onOpenPreOrder }) => {
   const [openFaq, setOpenFaq] = useState(null);
-  const [activeHotspot, setActiveHotspot] = useState(null);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
-
-  const featuredGamesRow = [
-    {
-      title: 'Crimson Desert Enhanced',
-      img: '/assets/games/forza_cover.jpg',
-      tag: 'DirectStorage 60 FPS'
-    },
-    {
-      title: 'ARC Raiders',
-      img: '/assets/games/cs2_cover.jpg',
-      tag: 'Competitive 144Hz'
-    },
-    {
-      title: "Tom Clancy's Rainbow Six Siege - Elite Edition",
-      img: '/assets/games/cyberpunk_cover.jpg',
-      tag: 'Tactical Shooter'
-    },
-    {
-      title: 'Call of Duty: Black Ops 6 - Cross-Gen Bundle',
-      img: '/assets/games/gtav_cover.jpg',
-      tag: 'DirectStorage Ultra'
-    },
-    {
-      title: 'Final Fantasy VII Remake',
-      img: '/assets/games/spiderman_cover.jpg',
-      tag: 'Action RPG'
-    }
-  ];
-
-  const hotspots = [
-    { id: 1, top: '48%', left: '46%', label: 'XPlay DirectStorage Engine', desc: '1,050 MB/s sustained read speeds directly to GPU memory' },
-    { id: 2, top: '56%', left: '33%', label: 'Game Library & Launcher', desc: 'Seamless integration with Steam, Epic Games, and Rockstar' },
-    { id: 3, top: '68%', left: '48%', label: 'SAN Policy 4 Drive Isolation', desc: 'Zero writes to laptop internal C: drive keeping study files safe' },
-    { id: 4, top: '52%', left: '66%', label: 'Ultra-Low Latency Input', desc: 'Full native controller mapping and sub-millisecond mouse polling' },
-    { id: 5, top: '42%', left: '60%', label: '1080p 60 FPS Direct Output', desc: 'Optimized rendering pipeline for budget and integrated GPUs' }
-  ];
 
   const faqs = [
     {
@@ -204,133 +166,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
 
 
       {/* ============================================================== */}
-      {/* 3. SECTION 3: XPLAY MODE ON, WORK MODE OFF                     */}
-      {/* ============================================================== */}
-      <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
-        <div className="max-w-[1600px] w-full mx-auto space-y-16">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left: Setup Image */}
-            <div className="lg:col-span-7">
-              <div className="overflow-hidden">
-                <img
-                  src="/assets/xbox_pc/setup_mode.png"
-                  alt="XPlay mode on, work mode off setup"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Right: Typography */}
-            <div className="lg:col-span-5 space-y-6 text-left">
-              <div>
-                <span className="bg-[#ffd700] text-black font-extrabold text-[11px] px-2.5 py-1 rounded-[2px] uppercase tracking-wider inline-block">
-                  INTRODUCING
-                </span>
-              </div>
-
-              <h2 className="text-3xl sm:text-5xl font-black text-white font-round-bold uppercase leading-tight">
-                XPlay mode on, <br />
-                work mode off
-              </h2>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Get an XPlay console-inspired, controller-optimised, dedicated gaming experience on your Windows 10/11 PC and handheld. Seamlessly switch between XPlay mode and the desktop and play across devices with your achievements, game progress, and purchases. Plus, bring all your games together from most PC storefronts.
-              </p>
-
-              <div>
-                <button
-                  onClick={() => onOpenPreOrder?.('student')}
-                  className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2"
-                >
-                  <span>LEARN MORE</span>
-                  <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* 5 Featured Games Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-4">
-            {featuredGamesRow.map((g, idx) => (
-              <div 
-                key={idx}
-                className="group cursor-pointer space-y-2 text-left"
-                onClick={() => onOpenPreOrder?.('student')}
-              >
-                <div className="aspect-[2/3] overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl bg-black">
-                  <img src={g.img} alt={g.title} className="w-full h-full object-cover" />
-                </div>
-                <h4 className="text-xs font-bold text-white group-hover:text-[#00e5ff] transition-colors truncate">
-                  {g.title}
-                </h4>
-                <span className="text-[10px] font-mono text-slate-400 block">
-                  {g.tag}
-                </span>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 4. SECTION 4: MADE FOR PC (FULL BLEED WITH HOTSPOTS)           */}
-      {/* ============================================================== */}
-      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
-        <div className="max-w-3xl mx-auto px-6 space-y-4 mb-14">
-          <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-none">
-            MADE FOR PC
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            The XPlay PC engine is the best way to play, connect, and shop with XPlay on PC—all designed for PC players to enhance your gaming experience with XPlay.
-          </p>
-          <div className="pt-2">
-            <button
-              onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2"
-            >
-              <span>GET THE APP</span>
-              <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
-            </button>
-          </div>
-        </div>
-
-        {/* 100% Full Bleed Edge-To-Edge Image with Hotspots */}
-        <div className="relative w-full overflow-hidden bg-black">
-          <img
-            src="/assets/xbox_pc/made_for_pc.jpg"
-            alt="Made For PC Setup"
-            className="w-full h-auto object-cover"
-          />
-
-          {/* Interactive Hotspot Plus Buttons */}
-          {hotspots.map((h) => (
-            <div 
-              key={h.id} 
-              className="absolute"
-              style={{ top: h.top, left: h.left }}
-            >
-              <button
-                onClick={() => setActiveHotspot(activeHotspot === h.id ? null : h.id)}
-                className="w-8 h-8 rounded-full bg-black/80 border-2 border-white text-white hover:bg-[#00e5ff] hover:border-[#00e5ff] hover:text-black flex items-center justify-center transition-all cursor-pointer shadow-xl hover:scale-110"
-              >
-                <Plus className="w-4 h-4 stroke-[3]" />
-              </button>
-
-              {activeHotspot === h.id && (
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 p-3.5 rounded-xl bg-slate-950/95 border border-white/20 text-left shadow-2xl backdrop-blur-md z-30">
-                  <span className="text-xs font-bold text-[#00e5ff] block">{h.label}</span>
-                  <p className="text-[11px] text-slate-300 mt-1 leading-snug">{h.desc}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 5. SECTION 5: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
+      {/* 3. SECTION 3: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
       {/* ============================================================== */}
       <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 mb-14">
@@ -351,7 +187,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. SECTION 6: 3-COLUMN FEATURE PILLARS                         */}
+      {/* 4. SECTION 4: 3-COLUMN FEATURE PILLARS                         */}
       {/* ============================================================== */}
       <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
@@ -401,7 +237,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 7. SECTION 7: FREQUENTLY ASKED QUESTIONS                       */}
+      {/* 5. SECTION 5: FREQUENTLY ASKED QUESTIONS                       */}
       {/* ============================================================== */}
       <section id="faqs" className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
         <div className="max-w-[1200px] mx-auto space-y-12">
@@ -460,7 +296,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 8. OFFICIAL XPLAY GAMING FOOTER                                */}
+      {/* 6. OFFICIAL XPLAY GAMING FOOTER                                */}
       {/* ============================================================== */}
       <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
