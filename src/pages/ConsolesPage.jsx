@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Cpu, 
   Zap, 
@@ -9,13 +10,15 @@ import {
   Check, 
   Box, 
   Cable, 
-  Sparkles 
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import GamingFooter from '../sections/GamingFooter';
 
 const ConsolesPage = ({ onOpenPreOrder }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-[#060b18] to-slate-950 text-white pt-20 pb-24 select-none font-sans overflow-x-hidden selection:bg-sky-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 pt-20 pb-0 select-none font-sans overflow-x-hidden selection:bg-[#00e5ff] selection:text-black">
       <SEO
         title="Consoles — High-Speed Gaming Hardware"
         description="Experience XPlay hardware. Powered by high-speed NVMe DirectStorage performance, anodized aluminum alloy enclosure, and zero-footprint host isolation."
@@ -29,7 +32,7 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
           brand: { '@type': 'Brand', name: 'XPlay' },
           offers: {
             '@type': 'Offer',
-            price: '7999',
+            price: '6999',
             priceCurrency: 'INR',
             availability: 'https://schema.org/PreOrder'
           }
@@ -37,26 +40,26 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
       />
 
       {/* 1. Hardware Hero Showcase */}
-      <section className="relative w-full min-h-[80vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative w-full min-h-[75vh] flex flex-col items-center justify-center text-center px-6 pt-10 pb-16 overflow-hidden">
         {/* Subtle Ambient Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-sky-200/40 rounded-full blur-[140px] pointer-events-none" />
 
         {/* Top Eyebrow Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-950/80 border border-sky-400/40 text-sky-400 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-sky-600" />
           <span>NEXT-GEN HARDWARE REVEAL</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white mb-4">
-          XPLAY <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500">CONSOLE</span>
+        <h1 className="text-4xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-slate-900 mb-4 font-round-bold">
+          XPLAY <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-cyan-600 to-blue-600">CONSOLE</span>
         </h1>
-        <p className="text-slate-300 text-sm sm:text-lg max-w-xl mx-auto uppercase tracking-wider font-semibold mb-10">
+        <p className="text-slate-600 text-sm sm:text-lg max-w-xl mx-auto uppercase tracking-wider font-semibold mb-10">
           Play Has No Limits. Carry Your Entire Console With You.
         </p>
 
         {/* Floating Hardware Beauty Render */}
-        <div className="relative w-full max-w-4xl aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-white/20 shadow-[0_20px_60px_rgba(56,189,248,0.15)] bg-slate-900 group">
+        <div className="relative w-full max-w-4xl aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-white group">
           <img
             src="/brand/01_product_drive.jpg"
             alt="XPlay Console Hardware"
@@ -65,11 +68,11 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               e.target.src = '/assets/xplay_pocket_console_hero.jpg';
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent sm:opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent sm:opacity-90" />
           
           <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4 text-white">
             <div className="text-left">
-              <span className="text-[11px] font-mono uppercase tracking-widest text-sky-300 font-bold block">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#00e5ff] font-bold block">
                 CHASSIS SPECIFICATION
               </span>
               <span className="text-lg sm:text-xl font-bold tracking-wide">
@@ -77,8 +80,8 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               </span>
             </div>
             <button
-              onClick={() => onOpenPreOrder?.('pocket')}
-              className="px-6 py-3 rounded-xl bg-white hover:bg-sky-50 text-slate-950 font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
+              onClick={() => onOpenPreOrder?.('pro')}
+              className="px-6 py-3 rounded-xl bg-[#00e5ff] hover:bg-[#00c8e6] text-slate-950 font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
             >
               <span>Pre-Order Console</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -88,19 +91,19 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
 
         {/* Key Hardware Telemetry Pills */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl text-center">
-          <div className="p-5 rounded-2xl bg-white border border-sky-200 shadow-sm">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">1,050 <span className="text-xs text-sky-600 font-sans">MB/s</span></div>
             <div className="text-[11px] text-slate-500 uppercase tracking-wider font-bold mt-1">Sustained Read</div>
           </div>
-          <div className="p-5 rounded-2xl bg-white border border-sky-200 shadow-sm">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">0 <span className="text-xs text-sky-600 font-sans">BYTES</span></div>
             <div className="text-[11px] text-slate-500 uppercase tracking-wider font-bold mt-1">Host SSD Footprint</div>
           </div>
-          <div className="p-5 rounded-2xl bg-white border border-sky-200 shadow-sm">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">60 <span className="text-xs text-sky-600 font-sans">FPS</span></div>
             <div className="text-[11px] text-slate-500 uppercase tracking-wider font-bold mt-1">Direct Hardware Link</div>
           </div>
-          <div className="p-5 rounded-2xl bg-white border border-sky-200 shadow-sm">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono">40 <span className="text-xs text-sky-600 font-sans">Gbps</span></div>
             <div className="text-[11px] text-slate-500 uppercase tracking-wider font-bold mt-1">Braided Metal Link</div>
           </div>
@@ -228,18 +231,27 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               </ul>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-slate-100 flex items-center justify-between">
+            <div className="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] text-slate-500 uppercase block font-bold">Standard Price</span>
-                <span className="text-2xl font-black text-slate-900 font-mono">₹7,999</span>
+                <span className="text-[11px] text-emerald-600 uppercase block font-bold">Launch Discount</span>
+                <span className="text-2xl font-black text-slate-900 font-mono">₹6,999</span>
+                <span className="text-xs text-slate-400 line-through block">₹7,999</span>
               </div>
-              <button
-                onClick={() => onOpenPreOrder?.('student')}
-                className="px-7 py-3.5 rounded-xl bg-black hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg hover:scale-105 transition-all cursor-pointer"
-              >
-                <span>Pre-Order Student</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  to="/consoles/student"
+                  className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  Details
+                </Link>
+                <button
+                  onClick={() => onOpenPreOrder?.('student')}
+                  className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-[#00e5ff] hover:text-slate-950 text-white font-black text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg hover:scale-105 transition-all cursor-pointer"
+                >
+                  <span>Pre-Order</span>
+                  <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -290,18 +302,27 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               </ul>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-slate-100 flex items-center justify-between">
+            <div className="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] text-slate-500 uppercase block font-bold">Standard Price</span>
-                <span className="text-2xl font-black text-slate-900 font-mono">₹13,499</span>
+                <span className="text-[11px] text-emerald-600 uppercase block font-bold">Launch Discount</span>
+                <span className="text-2xl font-black text-slate-900 font-mono">₹12,499</span>
+                <span className="text-xs text-slate-400 line-through block">₹13,499</span>
               </div>
-              <button
-                onClick={() => onOpenPreOrder?.('standard')}
-                className="px-7 py-3.5 rounded-xl bg-black hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg hover:scale-105 transition-all cursor-pointer"
-              >
-                <span>Pre-Order Standard</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  to="/consoles/standard"
+                  className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  Details
+                </Link>
+                <button
+                  onClick={() => onOpenPreOrder?.('standard')}
+                  className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-[#00e5ff] hover:text-slate-950 text-white font-black text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg hover:scale-105 transition-all cursor-pointer"
+                >
+                  <span>Pre-Order</span>
+                  <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -352,18 +373,27 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               </ul>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-slate-100 flex items-center justify-between">
+            <div className="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] text-slate-500 uppercase block font-bold">Bundle Price</span>
-                <span className="text-2xl font-black text-slate-900 font-mono">₹18,499</span>
+                <span className="text-[11px] text-emerald-600 uppercase block font-bold">Launch Discount</span>
+                <span className="text-2xl font-black text-slate-900 font-mono">₹17,499</span>
+                <span className="text-xs text-slate-400 line-through block">₹18,499</span>
               </div>
-              <button
-                onClick={() => onOpenPreOrder?.('pro')}
-                className="px-7 py-3.5 rounded-xl bg-black hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg hover:scale-105 transition-all cursor-pointer"
-              >
-                <span>Pre-Order Pro</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  to="/consoles/pro"
+                  className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  Details
+                </Link>
+                <button
+                  onClick={() => onOpenPreOrder?.('pro')}
+                  className="px-5 py-3 rounded-xl bg-[#00e5ff] hover:bg-[#00c8e6] text-slate-950 font-black text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg hover:scale-105 transition-all cursor-pointer"
+                >
+                  <span>Pre-Order</span>
+                  <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -414,18 +444,27 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
               </ul>
             </div>
 
-            <div className="pt-8 mt-8 border-t border-slate-100 flex items-center justify-between">
+            <div className="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] text-slate-500 uppercase block font-bold">Flagship Price</span>
-                <span className="text-2xl font-black text-slate-900 font-mono">₹28,479</span>
+                <span className="text-[11px] text-emerald-600 uppercase block font-bold">Launch Discount</span>
+                <span className="text-2xl font-black text-slate-900 font-mono">₹27,479</span>
+                <span className="text-xs text-slate-400 line-through block">₹28,479</span>
               </div>
-              <button
-                onClick={() => onOpenPreOrder?.('ultimate')}
-                className="px-7 py-3.5 rounded-xl bg-black hover:bg-slate-800 text-white font-black text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg transition-all hover:scale-105 cursor-pointer"
-              >
-                <span>Pre-Order Ultimate</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  to="/consoles/ultimate"
+                  className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  Details
+                </Link>
+                <button
+                  onClick={() => onOpenPreOrder?.('ultimate')}
+                  className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-[#00e5ff] hover:text-slate-950 text-white font-black text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 cursor-pointer"
+                >
+                  <span>Pre-Order</span>
+                  <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -518,15 +557,18 @@ const ConsolesPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* Bottom CTA Banner */}
-      <div className="max-w-4xl mx-auto px-6 text-center pt-8">
+      <div className="max-w-4xl mx-auto px-6 text-center pt-8 pb-20">
         <button
-          onClick={() => onOpenPreOrder?.('pocket')}
-          className="px-10 py-4 rounded-xl bg-black hover:bg-slate-800 text-white font-black text-sm uppercase tracking-wider inline-flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
+          onClick={() => onOpenPreOrder?.('student')}
+          className="px-10 py-4 rounded-xl bg-slate-900 hover:bg-[#00e5ff] hover:text-slate-950 text-white font-black text-sm uppercase tracking-wider inline-flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-pointer"
         >
-          <span>Claim Launch Allocation — From ₹7,999</span>
+          <span>Claim Launch Allocation — From ₹6,999</span>
           <ArrowRight className="w-4 h-4 stroke-[2.5]" />
         </button>
       </div>
+
+      {/* Official Gaming Footer */}
+      <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
     </div>
   );

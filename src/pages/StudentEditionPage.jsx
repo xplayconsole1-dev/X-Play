@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ChevronRight, 
-  HardDrive
+  HardDrive,
+  Package,
+  Sparkles
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import { EDITIONS_DATA } from '../constants/editionsData';
 import GamingFooter from '../sections/GamingFooter';
 
 const StudentEditionPage = ({ onOpenPreOrder }) => {
@@ -12,6 +16,13 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  const inTheBox = [
+    { name: 'XPlay Student Console (250GB)', desc: 'Pre-loaded DirectStorage NVMe drive in anodized aluminum chassis' },
+    { name: 'Braided Type-C to Type-C Cable', desc: '10 Gbps high-speed shielded cable with USB-A adapter' },
+    { name: '1x Genuine AAA Game Key', desc: 'Permanent ownership license for Steam / Epic Games' },
+    { name: 'Quick Start Guide & Warranty Card', desc: '1-Year Comprehensive Replacement Warranty documentation' }
+  ];
 
   const faqs = [
     {
@@ -45,7 +56,48 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       />
 
       {/* ============================================================== */}
-      {/* 1. HERO SECTION: EXACT 1:1 FULL SCREEN VIDEO HERO              */}
+      {/* 1. STICKY SUB-NAV & BUY BAR                                    */}
+      {/* ============================================================== */}
+      <div className="sticky top-16 left-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200 px-4 sm:px-8 py-3 flex items-center justify-between text-xs transition-all shadow-sm">
+        <div className="flex items-center gap-3 sm:gap-6 overflow-x-auto no-scrollbar">
+          <Link to="/" className="text-slate-500 hover:text-slate-900 font-bold transition-colors shrink-0">
+            XPlay
+          </Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-sky-600 font-extrabold uppercase tracking-wider shrink-0">
+            Student Edition
+          </span>
+          
+          <div className="hidden lg:flex items-center gap-5 ml-4 text-slate-600 font-semibold">
+            <a href="#backtotop" className="hover:text-sky-600 transition-colors">Overview</a>
+            <a href="#instant-library" className="hover:text-sky-600 transition-colors">Digital Library</a>
+            <a href="#play-anywhere" className="hover:text-sky-600 transition-colors">Play Anywhere</a>
+            <a href="#in-the-box" className="hover:text-sky-600 transition-colors">In The Box</a>
+            <a href="#faqs" className="hover:text-sky-600 transition-colors">FAQ</a>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="text-right hidden sm:block">
+            <span className="text-base font-black text-slate-900 font-mono leading-none block">
+              ₹7,999
+            </span>
+            <span className="text-[10px] text-emerald-600 font-bold block">
+              Launch: ₹6,999
+            </span>
+          </div>
+
+          <button
+            onClick={() => onOpenPreOrder?.('student')}
+            className="px-4 sm:px-6 py-2 rounded-[2px] bg-[#00e5ff] hover:bg-[#00c8e6] text-slate-950 font-black uppercase tracking-wider text-xs shadow-md shadow-[#00e5ff]/20 transition-all cursor-pointer hover:scale-105 active:scale-95"
+          >
+            Pre-Order Now
+          </button>
+        </div>
+      </div>
+
+      {/* ============================================================== */}
+      {/* 2. HERO SECTION: EXACT 1:1 FULL SCREEN VIDEO HERO              */}
       {/* ============================================================== */}
       <section 
         id="backtotop" 
@@ -116,7 +168,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 2. SECTION 2: ELEVATE YOUR PC GAMING EXPERIENCE WITH XPLAY     */}
       {/* ============================================================== */}
-      <section className="w-full bg-white text-center select-none pt-24 pb-0 border-b border-slate-200/80">
+      <section id="instant-library" className="w-full bg-white text-center select-none pt-24 pb-0 border-b border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 mb-16">
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-slate-900 font-round-bold leading-tight">
             Elevate your PC gaming <br />
@@ -167,7 +219,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       {/* ============================================================== */}
       {/* 3. SECTION 3: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
       {/* ============================================================== */}
-      <section className="w-full bg-[#f8fafc] text-center select-none pt-24 pb-16 border-b border-slate-200/80">
+      <section id="play-anywhere" className="w-full bg-[#f8fafc] text-center select-none pt-24 pb-16 border-b border-slate-200/80">
         <div className="max-w-[1400px] mx-auto px-6 mb-14">
           <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 font-round-bold leading-tight">
             PLAY WITH XPLAY ANYWHERE
@@ -182,6 +234,42 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             alt="Play with XPlay anywhere hardware ecosystem"
             className="w-full h-auto object-cover"
           />
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* 4. WHAT'S IN THE BOX (PHYSICAL UNBOXING INVENTORY)             */}
+      {/* ============================================================== */}
+      <section id="in-the-box" className="py-24 px-6 sm:px-12 md:px-16 bg-white select-none border-b border-slate-200/80">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-sky-600 block">
+              PHYSICAL UNBOXING
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-900 font-round-bold">
+              What's In The Box
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Everything included inside the official Student Edition retail packaging to start 60 FPS gaming immediately.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {inTheBox.map((item, index) => (
+              <div 
+                key={index} 
+                className="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 flex items-start gap-4 hover:border-sky-400 hover:shadow-md transition-all text-left"
+              >
+                <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 shrink-0 mt-0.5">
+                  <Package className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-slate-900 mb-1">{item.name}</h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -295,7 +383,39 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. OFFICIAL XPLAY GAMING FOOTER                                */}
+      {/* 6. EDITION SWITCHER                                            */}
+      {/* ============================================================== */}
+      <section className="py-16 px-6 sm:px-12 md:px-16 bg-white select-none border-b border-slate-200/80">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="text-left">
+            <h4 className="text-xl font-black uppercase text-slate-900 font-round-bold">Explore Other Editions</h4>
+            <p className="text-slate-500 text-xs sm:text-sm mt-1">Compare features across Student, Standard, Pro, and Ultimate</p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            {Object.keys(EDITIONS_DATA).map((key) => {
+              const ed = EDITIONS_DATA[key];
+              const isCurrent = key === 'student';
+              const linkPath = key === 'student' ? '/consoles/student' : `/consoles/${key}`;
+              return (
+                <Link
+                  key={key}
+                  to={linkPath}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition-all ${
+                    isCurrent
+                      ? 'bg-slate-900 text-white shadow-md'
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200'
+                  }`}
+                >
+                  {ed.title} • {ed.launchPrice}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* 7. OFFICIAL XPLAY GAMING FOOTER                                */}
       {/* ============================================================== */}
       <GamingFooter onOpenPreOrder={onOpenPreOrder} />
 
