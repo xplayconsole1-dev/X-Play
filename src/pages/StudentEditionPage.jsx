@@ -107,7 +107,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#111111] text-[#f5f5f5] font-sans antialiased selection:bg-[#107c10] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#111111] text-[#f5f5f5] font-sans antialiased selection:bg-[#00e5ff] selection:text-black overflow-x-hidden">
       <SEO
         title="XPlay on PC | Student Edition (250GB DirectStorage Gaming Drive)"
         description="Transform any college laptop or budget PC into a 60 FPS gaming powerhouse. Includes 250GB fast SSD and 1x full AAA game key for ₹6,999."
@@ -151,17 +151,17 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               Discover a world of unparalleled gaming adventures designed to elevate your gaming experience on PC. Whether you're playing on a high-end rig, budget-friendly laptop, or anything in between, and whether you prefer a mouse and keyboard or an XPlay controller, we've got you covered.
             </p>
 
-            {/* Call To Action Button (Exact Xbox Green with Chevron) */}
+            {/* Call To Action Button (Ice Blue with Chevron) */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenPreOrder?.('student')}
-                className="group bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all duration-200 cursor-pointer shadow-lg shadow-[#107c10]/40 inline-flex items-center gap-2 hover:shadow-xl hover:shadow-[#107c10]/60"
+                className="group bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all duration-200 cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2 hover:shadow-xl hover:shadow-[#00e5ff]/50"
               >
                 <span>PRE-ORDER NOW — ₹6,999</span>
-                <ChevronRight className="w-4 h-4 stroke-[3] group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 stroke-[3] group-hover:translate-x-1 transition-transform text-slate-950" />
               </button>
 
-              <span className="text-xs text-[#9bf00b] font-mono font-bold px-3 py-1 rounded bg-black/40 border border-[#9bf00b]/30 backdrop-blur-sm">
+              <span className="text-xs text-[#00e5ff] font-mono font-bold px-3 py-1 rounded bg-black/40 border border-[#00e5ff]/30 backdrop-blur-sm">
                 Student Edition: 250GB SSD Included (₹6,999)
               </span>
             </div>
@@ -169,16 +169,67 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             {/* Legal / Hardware Specs Copy */}
             <p className="text-xs text-[#9ca3af] leading-relaxed pt-2">
               Requires Windows 10/11 version 22H2 or higher.{' '}
-              <a href="#specs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+              <a href="#specs" className="text-white underline hover:text-[#00e5ff] transition-colors">
                 See system requirements.
               </a>
               <br className="hidden sm:inline" />
               {' '}Having trouble setting up or choosing edition?{' '}
-              <a href="#faqs" className="text-white underline hover:text-[#9bf00b] transition-colors">
+              <a href="#faqs" className="text-white underline hover:text-[#00e5ff] transition-colors">
                 Get help here.
               </a>
             </p>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* 2. SECTION 2: ELEVATE YOUR PC GAMING EXPERIENCE WITH XPLAY     */}
+      {/* ============================================================== */}
+      <section className="w-full bg-[#111111] text-center select-none pt-24 pb-0">
+        <div className="max-w-[1400px] mx-auto px-6 mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
+            Elevate your PC gaming <br />
+            experience with XPLAY
+          </h2>
+        </div>
+
+        {/* 100% Full Bleed Edge-To-Edge Image Banner */}
+        <div className="relative w-full h-[580px] sm:h-[700px] flex items-end overflow-hidden bg-black">
+          <img
+            src="/assets/xbox_pc/library_poster.jpg"
+            alt="XPlay Game Library"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent hidden sm:block w-3/4" />
+
+          {/* Content Overlay */}
+          <div className="relative z-10 max-w-[1600px] w-full mx-auto px-6 sm:px-12 md:px-16 pb-16 text-left">
+            <div className="max-w-xl space-y-4">
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#00e5ff]">
+                <HardDrive className="w-4 h-4 text-[#00e5ff]" />
+                <span>XPLAY DIRECTSTORAGE VAULT</span>
+              </div>
+
+              <h3 className="text-3xl sm:text-5xl font-black text-white font-round-bold leading-tight uppercase">
+                Get an instant library on PC
+              </h3>
+
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                XPlay unlocks immediate access to high-quality games and more. Install and play new games on day one and enjoy in-game benefits for the biggest games. Want to own the games you love? Enjoy permanent ownership on Steam, Epic, and Rockstar with zero host storage wear.
+              </p>
+
+              <div className="pt-2">
+                <button
+                  onClick={() => onOpenPreOrder?.('student')}
+                  className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2"
+                >
+                  <span>EXPLORE GAMES</span>
+                  <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -222,10 +273,10 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
               <div>
                 <button
                   onClick={() => onOpenPreOrder?.('student')}
-                  className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+                  className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2"
                 >
                   <span>LEARN MORE</span>
-                  <ChevronRight className="w-4 h-4 stroke-[3]" />
+                  <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
                 </button>
               </div>
             </div>
@@ -242,7 +293,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                 <div className="aspect-[2/3] overflow-hidden group-hover:scale-105 transition-all duration-300 shadow-xl bg-black">
                   <img src={g.img} alt={g.title} className="w-full h-full object-cover" />
                 </div>
-                <h4 className="text-xs font-bold text-white group-hover:text-[#9bf00b] transition-colors truncate">
+                <h4 className="text-xs font-bold text-white group-hover:text-[#00e5ff] transition-colors truncate">
                   {g.title}
                 </h4>
                 <span className="text-[10px] font-mono text-slate-400 block">
@@ -269,10 +320,10 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           <div className="pt-2">
             <button
               onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
+              className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 inline-flex items-center gap-2"
             >
               <span>GET THE APP</span>
-              <ChevronRight className="w-4 h-4 stroke-[3]" />
+              <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
             </button>
           </div>
         </div>
@@ -294,14 +345,14 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             >
               <button
                 onClick={() => setActiveHotspot(activeHotspot === h.id ? null : h.id)}
-                className="w-8 h-8 rounded-full bg-black/80 border-2 border-white text-white hover:bg-[#107c10] hover:border-[#107c10] flex items-center justify-center transition-all cursor-pointer shadow-xl hover:scale-110"
+                className="w-8 h-8 rounded-full bg-black/80 border-2 border-white text-white hover:bg-[#00e5ff] hover:border-[#00e5ff] hover:text-black flex items-center justify-center transition-all cursor-pointer shadow-xl hover:scale-110"
               >
                 <Plus className="w-4 h-4 stroke-[3]" />
               </button>
 
               {activeHotspot === h.id && (
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 p-3.5 rounded-xl bg-slate-950/95 border border-white/20 text-left shadow-2xl backdrop-blur-md z-30">
-                  <span className="text-xs font-bold text-[#9bf00b] block">{h.label}</span>
+                  <span className="text-xs font-bold text-[#00e5ff] block">{h.label}</span>
                   <p className="text-[11px] text-slate-300 mt-1 leading-snug">{h.desc}</p>
                 </div>
               )}
@@ -334,7 +385,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             />
           </div>
 
-          {/* Right: Typography and Vertical Tabs with Green Indicator */}
+          {/* Right: Typography and Vertical Tabs with Ice Blue Indicator */}
           <div className="lg:col-span-4 space-y-6 text-left">
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-5xl font-black text-white font-round-bold uppercase leading-tight">
@@ -353,7 +404,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                   onClick={() => setActiveHudTab(idx)}
                   className={`p-3.5 rounded-lg cursor-pointer transition-all border-l-4 ${
                     activeHudTab === idx
-                      ? 'border-[#107c10] bg-white/10 text-white font-bold'
+                      ? 'border-[#00e5ff] bg-white/10 text-white font-bold'
                       : 'border-transparent text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -373,50 +424,14 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 6. SECTION 6: ROG ALLY X & ROG ALLY (FULL BLEED HANDHELD)      */}
-      {/* ============================================================== */}
-      <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
-        <div className="max-w-2xl mx-auto px-6 space-y-4 mb-14">
-          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
-            ROG Ally X & ROG Ally
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Experience seamless PC gaming on the go with the best of ROG and XPlay together in a gaming handheld.
-          </p>
-          <div className="pt-2">
-            <button
-              onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-[2px] transition-all cursor-pointer shadow-lg inline-flex items-center gap-2"
-            >
-              <span>MEET ROG ALLY</span>
-              <ChevronRight className="w-4 h-4 stroke-[3]" />
-            </button>
-          </div>
-        </div>
-
-        {/* 100% Full Bleed Edge-To-Edge Handheld Video */}
-        <div className="w-full overflow-hidden bg-black">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/assets/xbox_pc/rog_ally_poster.jpg"
-            className="w-full h-auto object-cover"
-            src="https://cms-assets.xboxservices.com/assets/d7/8c/d78c75f7-06fb-4693-8ee5-29d9196181c9.mp4?n=985-HUB_Page-Hero-0_9856321_1920x1080_01.mp4"
-          />
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 7. SECTION 7: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
+      {/* 6. SECTION 6: PLAY WITH XPLAY ANYWHERE (FULL BLEED)            */}
       {/* ============================================================== */}
       <section className="w-full bg-[#111111] text-center select-none pt-24 border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 mb-14">
           <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-round-bold leading-tight">
             PLAY WITH XPLAY ANYWHERE
           </h2>
-          <div className="w-16 h-1 bg-[#107c10] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-[#00e5ff] mx-auto mt-4 rounded-full" />
         </div>
 
         {/* 100% Full Bleed Edge-To-Edge Image */}
@@ -430,7 +445,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 8. SECTION 8: 3-COLUMN FEATURE PILLARS                         */}
+      {/* 7. SECTION 7: 3-COLUMN FEATURE PILLARS                         */}
       {/* ============================================================== */}
       <section className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
@@ -444,7 +459,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             </p>
             <a 
               href="#specs" 
-              className="text-[#9bf00b] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
+              className="text-[#00e5ff] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
             >
               <span>SHOP XPLAY ANYWHERE GAMES</span>
               <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
@@ -460,7 +475,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             </p>
             <a 
               href="#specs" 
-              className="text-[#9bf00b] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
+              className="text-[#00e5ff] hover:underline font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5"
             >
               <span>EXPLORE DIRECTSTORAGE</span>
               <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />
@@ -480,7 +495,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
       </section>
 
       {/* ============================================================== */}
-      {/* 9. SECTION 9: FREQUENTLY ASKED QUESTIONS                       */}
+      {/* 8. SECTION 8: FREQUENTLY ASKED QUESTIONS                       */}
       {/* ============================================================== */}
       <section id="faqs" className="w-full py-24 px-6 sm:px-12 md:px-16 bg-[#111111] select-none border-t border-white/5">
         <div className="max-w-[1200px] mx-auto space-y-12">
@@ -498,8 +513,8 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
                   onClick={() => toggleFaq(index)}
                   className="w-full text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none group"
                 >
-                  <span className="font-bold text-base sm:text-lg text-white group-hover:text-[#9bf00b] transition-colors flex items-center gap-3">
-                    <ChevronRight className={`w-4 h-4 text-[#9bf00b] transition-transform duration-200 ${openFaq === index ? 'rotate-90' : ''}`} />
+                  <span className="font-bold text-base sm:text-lg text-white group-hover:text-[#00e5ff] transition-colors flex items-center gap-3">
+                    <ChevronRight className={`w-4 h-4 text-[#00e5ff] transition-transform duration-200 ${openFaq === index ? 'rotate-90' : ''}`} />
                     <span>{faq.q}</span>
                   </span>
                 </button>
@@ -516,7 +531,7 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
           {/* Full Width Reservation Banner */}
           <div className="p-8 sm:p-12 rounded-xl bg-black border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-2xl">
             <div>
-              <span className="text-xs font-mono font-bold text-[#9bf00b] uppercase tracking-widest block mb-1">
+              <span className="text-xs font-mono font-bold text-[#00e5ff] uppercase tracking-widest block mb-1">
                 LIMITED INTRODUCTORY BATCH
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white font-round-bold">
@@ -528,10 +543,10 @@ const StudentEditionPage = ({ onOpenPreOrder }) => {
             </div>
             <button
               onClick={() => onOpenPreOrder?.('student')}
-              className="bg-[#107c10] hover:bg-[#0e6b0e] active:scale-95 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shrink-0 inline-flex items-center gap-2"
+              className="bg-[#00e5ff] hover:bg-[#00c8e6] active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider px-8 py-4 rounded-[2px] transition-all cursor-pointer shadow-lg shadow-[#00e5ff]/30 shrink-0 inline-flex items-center gap-2"
             >
               <span>PRE-ORDER NOW</span>
-              <ChevronRight className="w-4 h-4 stroke-[3]" />
+              <ChevronRight className="w-4 h-4 stroke-[3] text-slate-950" />
             </button>
           </div>
 
