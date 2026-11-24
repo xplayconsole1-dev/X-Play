@@ -177,8 +177,8 @@ const Navbar = ({ onOpenPreOrder, onOpenLogin }) => {
           )}
         </div>
 
-        <Link to="/games" className="hover:text-cyan-300 transition-colors hidden sm:inline-block">
-          Games
+        <Link to="/community" className="hover:text-cyan-300 transition-colors hidden sm:inline-block">
+          Community
         </Link>
 
         <Link to="/about" className="hover:text-cyan-300 transition-colors hidden md:inline-block">

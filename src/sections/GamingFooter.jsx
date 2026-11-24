@@ -136,14 +136,14 @@ const GamingFooter = ({ onOpenPreOrder }) => {
               </div>
             </div>
 
-            {/* Sub-col 2: Games & Hardware */}
+            {/* Sub-col 2: Community & Hardware */}
             <div className="flex flex-col space-y-2.5">
               <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider">
-                Platform
+                Community
               </h4>
               <div className="flex flex-col space-y-2 text-xs text-slate-600">
-                <Link to="/games" className="hover:text-sky-600 transition-colors">
-                  Game Library
+                <Link to="/community" className="hover:text-sky-600 transition-colors">
+                  Gamers Hub
                 </Link>
                 <Link to="/consoles" className="hover:text-sky-600 transition-colors">
                   DirectStorage NVMe
@@ -233,14 +233,11 @@ const GamingFooter = ({ onOpenPreOrder }) => {
             <Link to="/consoles" className="hover:text-sky-600 transition-colors">
               Consoles
             </Link>
-            <Link to="/games" className="hover:text-sky-600 transition-colors">
-              Games
+            <Link to="/community" className="hover:text-sky-600 transition-colors">
+              Community
             </Link>
             <Link to="/about" className="hover:text-sky-600 transition-colors">
               About
-            </Link>
-            <Link to="/community" className="hover:text-sky-600 transition-colors">
-              Community
             </Link>
             <Link to="/support" className="hover:text-sky-600 transition-colors">
               Support
