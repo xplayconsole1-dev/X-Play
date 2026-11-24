@@ -99,76 +99,82 @@ const GamingFooter = ({ onOpenPreOrder }) => {
             
             {/* Sub-col 1: Editions */}
             <div className="flex flex-col space-y-2.5">
-              <h4 className="text-xs font-sans font-bold text-sky-800 uppercase tracking-wider">
+              <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider">
                 Consoles
               </h4>
-              <div className="flex flex-col space-y-2 text-xs font-sans text-slate-600">
-                <button
-                  onClick={() => onOpenPreOrder?.('student')}
-                  className="text-left hover:text-sky-600 transition-colors cursor-pointer"
+              <div className="flex flex-col space-y-2 text-xs text-slate-600">
+                <Link
+                  to="/consoles/student"
+                  className="hover:text-sky-600 transition-colors"
                 >
-                  Student (₹7,999)
-                </button>
-                <button
-                  onClick={() => onOpenPreOrder?.('standard')}
-                  className="text-left hover:text-sky-600 transition-colors cursor-pointer"
+                  Student (₹6,999)
+                </Link>
+                <Link
+                  to="/consoles/standard"
+                  className="hover:text-sky-600 transition-colors"
                 >
-                  Standard (₹13,499)
-                </button>
-                <button
-                  onClick={() => onOpenPreOrder?.('pro')}
-                  className="text-left font-bold text-sky-700 hover:text-sky-800 transition-colors cursor-pointer"
+                  Standard (₹12,499)
+                </Link>
+                <Link
+                  to="/consoles/pro"
+                  className="font-bold text-sky-700 hover:text-sky-800 transition-colors"
                 >
-                  Pro (₹18,499)
-                </button>
-                <button
-                  onClick={() => onOpenPreOrder?.('ultimate')}
-                  className="text-left hover:text-sky-600 transition-colors cursor-pointer"
+                  Pro Edition (₹17,499)
+                </Link>
+                <Link
+                  to="/consoles/ultimate"
+                  className="hover:text-sky-600 transition-colors"
                 >
-                  Ultimate (₹28,479)
-                </button>
+                  Ultimate (₹27,479)
+                </Link>
+                <Link
+                  to="/consoles"
+                  className="text-sky-600 font-semibold hover:underline transition-colors pt-1"
+                >
+                  Compare All &rarr;
+                </Link>
               </div>
             </div>
 
-            {/* Sub-col 2: Ecosystem */}
+            {/* Sub-col 2: Games & Hardware */}
             <div className="flex flex-col space-y-2.5">
-              <h4 className="text-xs font-sans font-bold text-sky-800 uppercase tracking-wider">
-                Ecosystem
+              <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider">
+                Platform
               </h4>
-              <div className="flex flex-col space-y-2 text-xs font-sans text-slate-600">
-                <Link to="/games" className="hover:text-sky-600 transition-colors">
-                  1,200+ Games
-                </Link>
+              <div className="flex flex-col space-y-2 text-xs text-slate-600">
                 <Link to="/games" className="hover:text-sky-600 transition-colors">
                   Game Library
                 </Link>
-                <Link to="/#about" className="hover:text-sky-600 transition-colors">
-                  CNC Hardware
+                <Link to="/consoles" className="hover:text-sky-600 transition-colors">
+                  DirectStorage NVMe
                 </Link>
-                <Link to="/#consoles" className="hover:text-sky-600 transition-colors">
-                  Editions Compare
+                <Link to="/consoles" className="hover:text-sky-600 transition-colors">
+                  Hardware Tech Specs
+                </Link>
+                <Link to="/support" className="hover:text-sky-600 transition-colors">
+                  System Requirements
                 </Link>
               </div>
             </div>
 
-            {/* Sub-col 3: Company */}
+            {/* Sub-col 3: Company & Support */}
             <div className="flex flex-col space-y-2.5">
-              <h4 className="text-xs font-sans font-bold text-sky-800 uppercase tracking-wider">
-                Company
+              <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider">
+                Company & Help
               </h4>
-              <div className="flex flex-col space-y-2 text-xs font-sans text-slate-600">
+              <div className="flex flex-col space-y-2 text-xs text-slate-600">
                 <Link to="/about" className="hover:text-sky-600 transition-colors">
                   About XPlay
+                </Link>
+                <Link to="/support" className="hover:text-sky-600 transition-colors">
+                  Support & Helpdesk
+                </Link>
+                <Link to="/support" className="hover:text-sky-600 transition-colors">
+                  1-Yr Doorstep Warranty
                 </Link>
                 <Link to="/community" className="hover:text-sky-600 transition-colors">
                   Community Hub
                 </Link>
-                <Link to="/support" className="hover:text-sky-600 transition-colors">
-                  Support Desk
-                </Link>
-                <span className="hover:text-sky-600 transition-colors cursor-pointer">
-                  Pan-India Shipping
-                </span>
               </div>
             </div>
 
@@ -224,7 +230,7 @@ const GamingFooter = ({ onOpenPreOrder }) => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-semibold text-slate-700">
-            <Link to="/#consoles" className="hover:text-sky-600 transition-colors">
+            <Link to="/consoles" className="hover:text-sky-600 transition-colors">
               Consoles
             </Link>
             <Link to="/games" className="hover:text-sky-600 transition-colors">
